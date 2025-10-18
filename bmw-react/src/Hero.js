@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
-  const [knowMoreHover, setKnowMoreHover] = useState(false);
+  const [BMWMHover, setBMWMHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -9,7 +11,7 @@ function Hero() {
       style={{
         backgroundImage: 'url("/R.gif")',
         backgroundColor: "#cccccc",
-        height: "700px",
+        height: "750px",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -25,7 +27,7 @@ function Hero() {
         <button
           type="button"
           className="button button1"
-          style={knowMoreHover ? {
+          style={BMWMHover ? {
             backgroundImage: 'url("/BMW-M-logo.png")',
             backgroundPosition: "center",
             backgroundSize: "150%",
@@ -33,10 +35,11 @@ function Hero() {
             color: "transparent",
             border: "2px solid transparent"
           } : {}}
-          onMouseEnter={() => setKnowMoreHover(true)}
-          onMouseLeave={() => setKnowMoreHover(false)}
+          onMouseEnter={() => setBMWMHover(true)}
+          onMouseLeave={() => setBMWMHover(false)}
+          onClick={() => navigate('/BMWM')}
         >
-          Know More
+          BMW M
         </button>
       </div>
     </div>

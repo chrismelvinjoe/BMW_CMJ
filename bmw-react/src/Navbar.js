@@ -25,10 +25,10 @@ function Navbar() {
       className={`nav ${menuOpen ? "open" : ""}`}
       style={{
         position: "fixed",
-        top: 0,
+        top: 8,
         left: 0,
         right: 0,
-        zIndex: 1000,
+        zIndex: 999,
         backgroundColor: "transparent",
         padding: "16px 20px",
         transform: hidden ? "translateY(-110%)" : "translateY(0)",

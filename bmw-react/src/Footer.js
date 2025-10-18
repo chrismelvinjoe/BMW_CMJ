@@ -31,7 +31,7 @@ function Footer() {
             paddingTop: "20px"
           }}>
             <li style={{ textAlign: "center" }}>
-              <a href="#" style={{
+              <a href="button" style={{
                 color: "aliceblue",
                 display: "block",
                 padding: "6px 10px",
@@ -43,7 +43,7 @@ function Footer() {
               </a>
             </li>
             <li style={{ textAlign: "center" }}>
-              <a href="#" style={{
+              <a href="button" style={{
                 color: "aliceblue",
                 display: "block",
                 padding: "6px 10px",
@@ -55,7 +55,7 @@ function Footer() {
               </a>
             </li>
             <li style={{ textAlign: "center" }}>
-              <a href="#" style={{
+              <a href="button" style={{
                 color: "aliceblue",
                 display: "block",
                 padding: "6px 10px",
@@ -67,7 +67,7 @@ function Footer() {
               </a>
             </li>
             <li style={{ textAlign: "center" }}>
-              <a href="#" style={{
+              <a href="button" style={{
                 color: "aliceblue",
                 display: "block",
                 padding: "6px 10px",

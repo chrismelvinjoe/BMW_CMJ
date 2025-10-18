@@ -46,6 +46,7 @@ function VideoTile({ src, poster, title, subtitle }) {
           muted
           playsInline
           preload="metadata"
+          loop
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
         />
       </div>
