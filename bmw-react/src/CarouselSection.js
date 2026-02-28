@@ -7,12 +7,12 @@ function CarouselSection() {
   const carouselRef = useRef(null);
 
   const carouselItems = [
-    { src: "/BMWmultiLogo.mp4", title: "BMW M2", description: "Compact high-performance coupe" },
-    { src: "/NeueKlasse.mp4", title: "BMW M3 GTR", description: "Iconic racing pedigree" },
-    { src: "/RedElectro.mp4", title: "BMW M4", description: "Precision and power" },
-    { src: "BMWShoot.mp4", title: "BMW M4 GT", description: "Track-focused dynamics" },
-    { src: "/BMW tunnel.mp4", title: "BMW M5", description: "Executive performance sedan" },
-    { src: "/Snow Drift.mp4", title: "BMW X", description: "Versatile performance SUV" }
+    { src: "/assets/videos/BMWmultiLogo.mp4", title: "BMW M2", description: "Compact high-performance coupe" },
+    { src: "/assets/videos/NeueKlasse.mp4", title: "BMW M3 GTR", description: "Iconic racing pedigree" },
+    { src: "/assets/videos/RedElectro.mp4", title: "BMW M4", description: "Precision and power" },
+    { src: "/assets/videos/BMWShoot.mp4", title: "BMW M4 GT", description: "Track-focused dynamics" },
+    { src: "/assets/videos/BMW tunnel.mp4", title: "BMW M5", description: "Executive performance sedan" },
+    { src: "/assets/videos/Snow Drift.mp4", title: "BMW X", description: "Versatile performance SUV" }
   ];
 
   const visibleCount = 3;

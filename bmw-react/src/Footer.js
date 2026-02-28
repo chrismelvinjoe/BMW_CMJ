@@ -2,84 +2,104 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: "black", color: "white", padding: "40px 20px" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <p style={{ 
-            fontSize: "x-large", 
-            textAlign: "center", 
-            color: "#0095ff", 
-            marginBottom: "20px",
-            fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
-          }}>
-            Follow Us On
-          </p>
+    <footer
+      style={{
+        position: "relative",
+        backgroundColor: "#000000",
+        padding: "20px",
+        borderTop: "1px solid #333",
+        boxShadow: "0 -2px 10px rgba(0,0,0,0.3)",
+        marginTop: "auto"
+      }}
+    >
+      <div style={{
+        maxWidth: "1200px",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+        gap: "20px"
+      }}>
+        {/* Copyright and Contact Info */}
+        <div style={{
+          textAlign: "left",
+          color: "#ffffff",
+          fontSize: "14px",
+          fontFamily: "Arial, sans-serif"
+        }}>
+          <div style={{ marginBottom: "8px" }}>
+            © 2025 CMJ. All rights reserved.
+          </div>
+          <div>
+            Contact: <a href="mailto:customer.relations@bmw.com" style={{ color: "#ffffffff", textDecoration: "none" }}>
+              chrismelvinjoe2004.007@gmail.com
+            </a> | +91 9361838143
+          </div>
         </div>
-        
-        <nav className="foot">
-          <ul style={{
-            listStyleType: "none",
-            backgroundColor: "#000000",
-            margin: 0,
-            padding: 0,
-            overflow: "hidden",
-            borderTop: "1px solid #0095ff",
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "30px",
-            paddingTop: "20px"
-          }}>
-            <li style={{ textAlign: "center" }}>
-              <a href="button" style={{
-                color: "aliceblue",
-                display: "block",
-                padding: "6px 10px",
-                textDecoration: "none",
-                transition: "color 0.3s ease"
-              }} onMouseEnter={(e) => e.target.style.color = "#0095ff"}
-                 onMouseLeave={(e) => e.target.style.color = "aliceblue"}>
-                Instagram
-              </a>
-            </li>
-            <li style={{ textAlign: "center" }}>
-              <a href="button" style={{
-                color: "aliceblue",
-                display: "block",
-                padding: "6px 10px",
-                textDecoration: "none",
-                transition: "color 0.3s ease"
-              }} onMouseEnter={(e) => e.target.style.color = "#0095ff"}
-                 onMouseLeave={(e) => e.target.style.color = "aliceblue"}>
-                Youtube
-              </a>
-            </li>
-            <li style={{ textAlign: "center" }}>
-              <a href="button" style={{
-                color: "aliceblue",
-                display: "block",
-                padding: "6px 10px",
-                textDecoration: "none",
-                transition: "color 0.3s ease"
-              }} onMouseEnter={(e) => e.target.style.color = "#0095ff"}
-                 onMouseLeave={(e) => e.target.style.color = "aliceblue"}>
-                Facebook
-              </a>
-            </li>
-            <li style={{ textAlign: "center" }}>
-              <a href="button" style={{
-                color: "aliceblue",
-                display: "block",
-                padding: "6px 10px",
-                textDecoration: "none",
-                transition: "color 0.3s ease"
-              }} onMouseEnter={(e) => e.target.style.color = "#0095ff"}
-                 onMouseLeave={(e) => e.target.style.color = "aliceblue"}>
-                Twitter
-              </a>
-            </li>
-          </ul>
-        </nav>
+
+        {/* Social Media Icons */}
+        <div style={{
+          display: "flex",
+          gap: "20px",
+          alignItems: "center"
+        }}>
+          <a 
+            href="https://www.facebook.com/BMW" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="BMW Facebook"
+            style={{ color: "#ffffff", transition: "color 0.3s" }}
+            onMouseOver={(e) => e.target.style.color = "#1877f2"}
+            onMouseOut={(e) => e.target.style.color = "#ffffff"}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+
+          <a 
+            href="https://www.instagram.com/bmw" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="BMW Instagram"
+            style={{ color: "#ffffff", transition: "color 0.3s" }}
+            onMouseOver={(e) => e.target.style.color = "#E4405F"}
+            onMouseOut={(e) => e.target.style.color = "#ffffff"}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+            </svg>
+          </a>
+
+          <a 
+            href="https://www.youtube.com/user/BMW" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="BMW YouTube"
+            style={{ color: "#ffffff", transition: "color 0.3s" }}
+            onMouseOver={(e) => e.target.style.color = "#FF0000"}
+            onMouseOut={(e) => e.target.style.color = "#ffffff"}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+
+          <a 
+            href="https://twitter.com/BMW" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="BMW X (Twitter)"
+            style={{ color: "#ffffff", transition: "color 0.3s" }}
+            onMouseOver={(e) => e.target.style.color = "#1DA1F2"}
+            onMouseOut={(e) => e.target.style.color = "#ffffff"}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -6,8 +6,8 @@ function BMWM() {
   const [isPaused, setIsPaused] = useState(false);
 
   const m4gtImages = [
-    "/BMWM4GT(1).jpg", "/BMWM4GT(2).jpg", "/BMWM4GT(3).jpg", "/BMWM4GT(4).jpg", "/BMWM4GT(5).jpg",
-    "/BMWM4GT(6).jpg", "/BMWM4GT(7).jpg", "/BMWM4GT(8).jpg"
+    "/assets/images/BMWM4GT(1).jpg", "/assets/images/BMWM4GT(2).jpg", "/assets/images/BMWM4GT(3).jpg", "/assets/images/BMWM4GT(4).jpg", "/assets/images/BMWM4GT(5).jpg",
+    "/assets/images/BMWM4GT(6).jpg", "/assets/images/BMWM4GT(7).jpg", "/assets/images/BMWM4GT(8).jpg"
   ];
 
   const nextSlide = () => {
@@ -34,7 +34,7 @@ function BMWM() {
         <div className="article-container">
           <div className="video-section"> 
             <video 
-              src="/BMWM Airlines.mp4" 
+              src="/assets/videos/BMWM Airlines.mp4" 
               autoPlay 
               muted 
               loop
@@ -263,7 +263,7 @@ function BMWM() {
             </div>
             <div className="bmwmnxt-video">
               <video 
-                src="/BMWM Next.mp4" 
+                src="/assets/videos/BMWM Next.mp4" 
                 autoPlay i
                 muted 
                 loop
@@ -278,7 +278,7 @@ function BMWM() {
           <div className="rush-text-top-left">United by Performance</div>
           <div className="rush-text-bottom-right">GEN M</div>
           <video 
-            src="/The Rush.mp4" 
+            src="/assets/videos/The Rush.mp4" 
             autoPlay 
             muted 
             loop

@@ -21,20 +21,61 @@ function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`nav ${menuOpen ? "open" : ""}`}
-      style={{
-        position: "fixed",
-        top: 8,
-        left: 0,
-        right: 0,
-        zIndex: 999,
-        backgroundColor: "transparent",
-        padding: "16px 20px",
-        transform: hidden ? "translateY(-110%)" : "translateY(0)",
-        transition: "transform 200ms ease"
-      }}
-    >
+    <>
+      <svg style={{ display: "none" }}>
+        <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+          <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+          <feDisplacementMap in="SourceGraphic" in2="blurred" scale="70" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+      
+      <nav
+        className={`nav glass-container`}
+        style={{
+          position: "fixed",
+          top: 8,
+          left: 0,
+          right: 0,
+          zIndex: 999,
+          overflow: "hidden",
+          boxShadow: "0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1)",
+          transition: "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1)",
+          transform: hidden ? "translateY(-110%)" : "translateY(10px)"
+        }}
+      >
+        <div className="glass-filter" style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          backdropFilter: "blur(0px)",
+          filter: "url(#lg-dist)",
+          isolation: "isolate"
+        }}></div>
+        
+        <div className="glass-overlay" style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 1,
+        }}></div>
+        
+        <div className="glass-specular" style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 2,
+          borderRadius: "inherit",
+          overflow: "hidden",
+          boxShadow: "inset 0 0 0 rgba(255, 255, 255, 0.75), inset 0 0 0 rgba(255, 255, 255, 0.75)"
+        }}></div>
+        
+        <div className="glass-content" style={{
+          position: "relative",
+          zIndex: 3,
+          display: "flex",
+          alignItems: "center",
+          gap: "20px",
+          padding: "1rem 1.5rem 0.9rem"
+        }}>
       <header>
         <ul
           className="menu"
@@ -52,13 +93,13 @@ function Navbar() {
           {/* Left cluster (logo + slogan stay on the left) */}
           <li>
             <a href="/" style={{ display: "inline-flex", alignItems: "center" }}>
-              <img src="bmw logo.png" alt="BMW logo" height="35" width="65" />
+              <img src="/assets/images/bmw logo.png" alt="BMW logo" height="35" width="65" />
             </a>
           </li>
           <li
             className="slogan"
             style={{
-              color: "#e5e5e5",
+              color: "#ffffffff",
               fontSize: 18,
               fontWeight: 250,
               whiteSpace: "nowrap",
@@ -71,17 +112,17 @@ function Navbar() {
           </li>
 
           {/* Right-side links (pushed to the far right) */}
-          <li className="link" style={{ marginLeft: "auto" }}>
-            <a href="/" style={{ color: "#e5e5e5", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Home</a>
+          <li className="link" style={{ marginLeft: "550px" }}>
+            <a href="/" style={{ color: "#ffffffff", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Home</a>
           </li>
           <li className="link">
-            <a href="/electric" style={{ color: "#e5e5e5", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Electric</a>
+            <a href="/electric" style={{ color: "#ffffffff", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Electric</a>
           </li>
           <li className="link">
-            <a href="/service" style={{ color: "#e5e5e5", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Service</a>
+            <a href="/service" style={{ color: "#ffffffff", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Service</a>
           </li>
           <li className="link">
-            <a href="/models" style={{ color: "#e5e5e5", textDecoration: "none", fontFamily: fontStack, fontWeight: 100, fontSize: 18 }}>Models</a>
+            <a href="/models" style={{ color: "#ffffffff", textDecoration: "none", fontFamily: fontStack, fontWeight: 100, fontSize: 18 }}>Models</a>
           </li>
           <li>
             <button
@@ -127,8 +168,10 @@ function Navbar() {
           </li>
         </ul>
       </header>
+    </div>
     </nav>
+    </>
   );
-}
+};
 
 export default Navbar;

@@ -2,12 +2,24 @@ body {
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background-color: #000000;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #000000;
 }
 
 .nav ul {
   position: block;
   list-style-type: none;
-  background-color: black;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -29,7 +41,6 @@ body {
   text-decoration: none;
 }
 .nav li a:hover {
-  background-color: #000000;
   color: #1ca0ff;
 }
 .nav a {

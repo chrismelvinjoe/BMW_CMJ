@@ -9,7 +9,7 @@ function Hero() {
     <div
       className="image"
       style={{
-        backgroundImage: 'url("/R.gif")',
+        backgroundImage: 'url("/assets/images/R.gif")',
         backgroundColor: "#cccccc",
         height: "750px",
         backgroundPosition: "center",
@@ -28,7 +28,7 @@ function Hero() {
           type="button"
           className="button button1"
           style={BMWMHover ? {
-            backgroundImage: 'url("/BMW-M-logo.png")',
+            backgroundImage: 'url("/assets/images/BMW-M-logo.png")',
             backgroundPosition: "center",
             backgroundSize: "150%",
             backgroundRepeat: "no-repeat",

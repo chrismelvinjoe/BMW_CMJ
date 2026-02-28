@@ -5,15 +5,15 @@ function PartsScroller() {
 
   // Button2 labels and alt texts
   const button2Data = [
-    { img: "bmw brake disc.jpg", alt: "BMW brake disc", label: "Brake disc" },
-    { img: "bmw wiper blade.jpg", alt: "BMW wiper blade", label: "Wiper blade" },
-    { img: "bmw spark plug.jpg", alt: "BMW spark plug", label: "Spark plug" },
-    { img: "bmw battery.jpg", alt: "BMW battery", label: "Battery" },
-    { img: "bmw air filter.jpg", alt: "BMW air filter", label: "Air filter" }
+    { img: "/assets/images/bmw brake disc.jpg", alt: "BMW brake disc", label: "Brake disc" },
+    { img: "/assets/images/bmw wiper blade.jpg", alt: "BMW wiper blade", label: "Wiper blade" },
+    { img: "/assets/images/bmw spark plug.jpg", alt: "BMW spark plug", label: "Spark plug" },
+    { img: "/assets/images/bmw battery.jpg", alt: "BMW battery", label: "Battery" },
+    { img: "/assets/images/bmw air filter.jpg", alt: "BMW air filter", label: "Air filter" }
   ];
 
   const turboHoverStyle = {
-    backgroundImage: 'url("/turbo.png")',
+    backgroundImage: 'url("/assets/images/turbo.png")',
     backgroundPosition: "center",
     backgroundSize: "55%",
     backgroundRepeat: "no-repeat",

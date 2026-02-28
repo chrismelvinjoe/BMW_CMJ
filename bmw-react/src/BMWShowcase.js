@@ -62,8 +62,8 @@ function VideoTile({ src, poster, title, subtitle }) {
 
 function BMWShowcase() {
   const tiles = [
-    { src: "/bmwM4.mp4", title: "BMW Hidden Features", subtitle: "Discover clever functions in your BMW." },
-    { src: "/bmwM5.mp4", title: "The Heart of Joy", subtitle: "Redefining driving pleasure." }
+    { src: "/assets/videos/bmwM4.mp4", title: "BMW Hidden Features", subtitle: "Discover clever functions in your BMW." },
+    { src: "/assets/videos/bmwM5.mp4", title: "The Heart of Joy", subtitle: "Redefining driving pleasure." }
   ];
 
   return (

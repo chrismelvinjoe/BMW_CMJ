@@ -1,12 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Slideshow() {
+  const navigate = useNavigate();
+  
   const performanceItems = [
-    { image: "BMWnews.jpg", description: "All news" },
-    { image: "bmwevolution.jpg", description: "Evolution" },
-    { image: "BMWhypercar.jpg", description: "Racing" },
-    { image: "bmw interior.jpg", description: "Interior" },
-    { image: "spotifybmw.jpg", description: "Spotify Playlist" }
+    { image: "/assets/images/BMWmodel.jpg", description: "All Models", link: "/models" },
+    { image: "/assets/images/bmwevolution.jpg", description: "Evolution" },
+    { image: "/assets/images/BMWhypercar.jpg", description: "Racing" },
+    { image: "/assets/images/bmw interior.jpg", description: "Interior" },
+    { image: "/assets/images/spotifybmw.jpg", description: "Spotify Playlist", link: "https://open.spotify.com/user/bmw?si=aa435384ba984316" }
   ];
 
   return (
@@ -25,19 +28,32 @@ function Slideshow() {
               borderRadius: "0px",
               overflow: "hidden",
               transition: "all 0.3s ease",
-              cursor: "pointer",
+              cursor: item.link ? "pointer" : "default",
               flex: "1",
               maxWidth: "500px"
-            }} onMouseEnter={(e) => {
+            }} 
+            onMouseEnter={(e) => {
               e.currentTarget.style.transform = "scale(1.3)";
               e.currentTarget.style.zIndex = "10";
-            }} onMouseLeave={(e) => {
+            }} 
+            onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
               e.currentTarget.style.zIndex = "1";
+            }}
+            onClick={() => {
+              if (item.link) {
+                if (item.link.startsWith('http')) {
+                  // External link - open in new tab
+                  window.open(item.link, '_blank', 'noopener,noreferrer');
+                } else {
+                  // Internal link - use navigate
+                  navigate(item.link);
+                }
+              }
             }}>
               {/* Image */}
               <div style={{
-                backgroundImage: `url("/${item.image}")`,
+                backgroundImage: `url("${item.image}")`,
                 height: "450px",
                 backgroundPosition: "70% 50%",
                 backgroundRepeat: "no-repeat",

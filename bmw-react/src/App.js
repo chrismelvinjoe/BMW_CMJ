@@ -8,6 +8,7 @@ import Slideshow from "./Slideshow";
 import BMWConcepts from "./BMWConcepts";
 import CarouselSection from "./CarouselSection";
 import BMWM from "./BMW M";
+import AllModels from "./AllModels";
 import Footer from "./Footer";
 
 function Home() {
@@ -26,12 +27,25 @@ function Home() {
   );
 }
 
+function AllModelsPage() {
+  return (
+    <article>
+      <section>
+        <Navbar />
+        <AllModels />
+      </section>
+      <Footer />
+    </article>
+  );
+}
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/models" element={<AllModelsPage />} />
           <Route path="/BMWM" element={<BMWM />} />
         </Routes>
       </BrowserRouter>

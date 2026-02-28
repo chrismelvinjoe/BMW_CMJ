@@ -5,17 +5,17 @@ function BMWConcepts() {
     {
       title: "BMW M3 Celebrates 50 Years",
       description: "Sheer driving pleasure across seven generations of the iconic M3.",
-      image: "BMW E30 M3.jpg"
+      image: "/assets/images/BMW E30 M3.jpg"
     },
     {
       title: "Neue Klasse Production Begins",
       description: "BMW Group launches series production of electric engines for Neue Klasse.",
-      image: "BMW Neue Klasse.jpg"
+      image: "/assets/images/BMW Neue Klasse.jpg"
     },
     {
       title: "The Garmisch Concept",
       description: "The BMW Garmisch is a striking 1970 concept car designed by Marcello Gandini.",
-      image: "BMW Garmisch.jpg"
+      image: "/assets/images/BMW Garmisch.jpg"
     }
   ];
 
@@ -53,7 +53,7 @@ function BMWConcepts() {
             }}>
               {/* Image Section - Separate */}
               <div style={{
-                backgroundImage: `url("/${item.image}")`,
+                backgroundImage: `url("${item.image}")`,
                 height: "300px",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
