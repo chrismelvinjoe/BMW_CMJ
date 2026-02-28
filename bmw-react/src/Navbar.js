@@ -10,9 +10,9 @@ function Navbar() {
     const onScroll = () => {
       const y = window.scrollY || 0;
       if (y > lastY && y > 20) {
-        setHidden(true); // scrolling down
+        setHidden(true);
       } else {
-        setHidden(false); // scrolling up or near top
+        setHidden(false);
       }
       lastY = y;
     };
@@ -90,7 +90,6 @@ function Navbar() {
             fontFamily: fontStack
           }}
         >
-          {/* Left cluster (logo + slogan stay on the left) */}
           <li>
             <a href="/" style={{ display: "inline-flex", alignItems: "center" }}>
               <img src="/assets/images/bmw logo.png" alt="BMW logo" height="35" width="65" />
@@ -111,7 +110,6 @@ function Navbar() {
             The Ultimate Driving Machine
           </li>
 
-          {/* Right-side links (pushed to the far right) */}
           <li className="link" style={{ marginLeft: "550px" }}>
             <a href="/" style={{ color: "#ffffffff", textDecoration: "none", fontFamily: fontStack, fontWeight: 250, fontSize: 18 }}>Home</a>
           </li>
@@ -144,7 +142,6 @@ function Navbar() {
             </button>
           </li>
 
-          {/* Hamburger (CSS controls visibility on small screens). Dropdown removed per request */}
           <li>
             <button
               aria-label="Menu"

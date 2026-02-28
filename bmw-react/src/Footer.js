@@ -21,7 +21,6 @@ function Footer() {
         flexWrap: "wrap",
         gap: "20px"
       }}>
-        {/* Copyright and Contact Info */}
         <div style={{
           textAlign: "left",
           color: "#ffffff",
@@ -38,7 +37,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Social Media Icons */}
         <div style={{
           display: "flex",
           gap: "20px",

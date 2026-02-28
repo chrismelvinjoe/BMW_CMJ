@@ -16,7 +16,7 @@ function Hero() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         position: "relative",
-        paddingTop: "80px" // Add padding for sticky navbar
+        paddingTop: "80px"
       }}
     >
       <div className="text1">

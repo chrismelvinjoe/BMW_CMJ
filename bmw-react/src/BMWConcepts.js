@@ -51,7 +51,6 @@ function BMWConcepts() {
               e.currentTarget.style.transform = "scale(1)";
               e.currentTarget.style.boxShadow = "none";
             }}>
-              {/* Image Section - Separate */}
               <div style={{
                 backgroundImage: `url("${item.image}")`,
                 height: "300px",
@@ -65,7 +64,6 @@ function BMWConcepts() {
               }}>
               </div>
               
-              {/* Description Section - Separate and Under Image */}
               <div style={{ 
                 padding: "0px 20px 20px 20px",
                 backgroundColor: "transparent"

@@ -43,15 +43,12 @@ function Slideshow() {
             onClick={() => {
               if (item.link) {
                 if (item.link.startsWith('http')) {
-                  // External link - open in new tab
                   window.open(item.link, '_blank', 'noopener,noreferrer');
                 } else {
-                  // Internal link - use navigate
                   navigate(item.link);
                 }
               }
             }}>
-              {/* Image */}
               <div style={{
                 backgroundImage: `url("${item.image}")`,
                 height: "450px",
@@ -64,7 +61,6 @@ function Slideshow() {
                 transition: "all 0.3s ease"
               }} />
 
-              {/* Description under image */}
               <div style={{
                 marginTop: "15px",
                 color: "#e5e5e5",

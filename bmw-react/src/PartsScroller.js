@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function PartsScroller() {
   const [hoveredButton, setHoveredButton] = useState(null);
 
-  // Button2 labels and alt texts
   const button2Data = [
     { img: "/assets/images/bmw brake disc.jpg", alt: "BMW brake disc", label: "Brake disc" },
     { img: "/assets/images/bmw wiper blade.jpg", alt: "BMW wiper blade", label: "Wiper blade" },

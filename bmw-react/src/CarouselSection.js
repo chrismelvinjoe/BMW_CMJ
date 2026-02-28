@@ -22,7 +22,6 @@ function CarouselSection() {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex >= maxIndex) {
-        // jump back to start without transition
         setIsTransitionEnabled(false);
         setTimeout(() => setIsTransitionEnabled(true), 0);
         return 0;
@@ -59,14 +58,12 @@ function CarouselSection() {
       position: "relative"
     }}>
       <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-        {/* Two Column Layout */}
         <div style={{
           display: "grid",
           gridTemplateColumns: "0.4fr 1fr",
           gap: "50px",
           alignItems: "center"
         }}>
-          {/* Left Column - Text Container */}
           <div style={{
             padding: "40px 0"
           }}>
@@ -117,12 +114,10 @@ function CarouselSection() {
             </button>
           </div>
 
-          {/* Right Column - Carousel Container */}
           <div style={{
             position: "relative",
             overflow: "hidden"
           }}>
-            {/* Carousel Track */}
             <div 
               ref={carouselRef}
               style={{
@@ -151,7 +146,6 @@ function CarouselSection() {
                   onMouseEnter={() => setIsPaused(true)}
                   onMouseLeave={() => setIsPaused(false)}
                   >
-                    {/* Video Section (2:3 aspect ratio) */}
                     <div style={{ position: "relative", width: "100%", aspectRatio: "2 / 3", backgroundColor: "#000" }}>
                       <video
                         src={item.src}
@@ -164,7 +158,6 @@ function CarouselSection() {
                       />
                     </div>
                     
-                    {/* Content Section */}
                     <div style={{
                       padding: "20px",
                       backgroundColor: "#000000"
@@ -192,7 +185,6 @@ function CarouselSection() {
               ))}
             </div>
 
-            {/* Navigation Controls */}
             <div style={{
               display: "flex",
               justifyContent: "right",

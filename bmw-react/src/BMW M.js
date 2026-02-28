@@ -72,7 +72,6 @@ function BMWM() {
             alignItems: "center",
             flexDirection: "column"
           }}>
-            {/* Carousel Container */}
             <div 
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
@@ -83,7 +82,6 @@ function BMWM() {
                 alignSelf: "flex-start",
                 marginLeft: "50px"
               }}>
-              {/* First Tile */}
               <div style={{
                 width: "420px",
                 height: "525px",
@@ -100,7 +98,6 @@ function BMWM() {
                 />
               </div>
 
-              {/* Second Tile */}
               <div style={{
                 width: "420px",
                 height: "525px",
@@ -180,7 +177,6 @@ function BMWM() {
               </div>
             </div>
 
-            {/* Navigation Controls */}
             <div style={{
               display: "flex",
               gap: "20px",
