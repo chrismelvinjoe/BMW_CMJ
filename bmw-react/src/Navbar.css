@@ -5,11 +5,11 @@
     right: 0;
     z-index: 999;
     overflow: hidden;
-    /* Important for displacement filter clipping */
-    /* Allow mobile menu to show */
+    
+    
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
-    /* background/blur removed to reveal liquid glass divs */
+    
 }
 
 .glass-content {
@@ -73,10 +73,10 @@
 
 .nav .menu-btn {
     display: none;
-    /* Hide by default */
+    
 }
 
-/* Mobile Alignment Helpers */
+
 .nav .links-container {
     display: flex;
     align-items: center;
@@ -106,10 +106,10 @@
 
     .nav .links-container {
         display: none;
-        /* Hide links on mobile */
+        
     }
 
-    /* When menu is open, show links in a dropdown or overlay */
+    
     .nav.menu-open {
         overflow: visible;
     }

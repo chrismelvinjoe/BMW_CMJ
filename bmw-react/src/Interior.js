@@ -8,7 +8,7 @@ const Interior = () => {
 
     return (
         <div className="interior-page">
-            {/* Hero Section */}
+            
             <header className="interior-hero">
                 <img
                     src="/assets/images/BMW interior.jpg"
@@ -31,7 +31,7 @@ const Interior = () => {
             </header>
 
             <main className="interior-content">
-                {/* Intro Section */}
+                
                 <section className="interior-intro">
                     <div className="interior-intro-text">
                         <h2>The Driver-Centric Revolution</h2>
@@ -53,7 +53,7 @@ const Interior = () => {
                     />
                 </section>
 
-                {/* Stats Strip */}
+                
                 <section className="interior-stats">
                     <div className="interior-stat">
                         <span className="interior-stat-value">Curved</span>
@@ -69,7 +69,7 @@ const Interior = () => {
                     </div>
                 </section>
 
-                {/* Design Grid */}
+                
                 <section className="interior-design">
                     <div className="interior-design-grid">
                         <div className="interior-design-card">
@@ -117,7 +117,7 @@ const Interior = () => {
                     </div>
                 </section>
 
-                {/* Collaboration Highlight */}
+                
                 <section className="interior-collaboration">
                     <div className="interior-collab-content">
                         <div className="interior-collab-text">

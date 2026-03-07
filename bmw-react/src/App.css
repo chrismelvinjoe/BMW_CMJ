@@ -43,7 +43,7 @@ html {
 }
 
 .nav li a:hover {
-  /* Removed blue hover color to match new design */
+  
 }
 
 .nav a {
@@ -104,7 +104,7 @@ html {
 
 div.side-scrollbar {
   display: none;
-  /* User requested to hide the side scroller */
+  
   background-color: #333;
   overflow: auto;
   white-space: nowrap;
@@ -186,7 +186,7 @@ footer {
   color: #1ca0ff;
 }
 
-/* Liquid Glass Button Container - Invisible Slab shape */
+
 .btn-liquid-glass {
   position: relative;
   background: transparent;
@@ -198,7 +198,7 @@ footer {
   padding: 30px 40px;
   min-width: 150px;
   --btn-y: -40px;
-  /* <--- Chnge this number to move it up/down (-80px, -100px, etc) */
+  
   transform: translateY(var(--btn-y));
   font-family: "Impact", haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-style: italic;
@@ -471,7 +471,7 @@ img {
   z-index: 1;
 }
 
-/* --- Horizontal M-Sport Lightning Field --- */
+
 .m-lightning-field {
   position: fixed;
   inset: 0;
@@ -488,7 +488,7 @@ img {
   pointer-events: none;
 }
 
-/* Color Variants */
+
 .m-spark.blue-light {
   background: linear-gradient(to right, transparent, #81C4FF, transparent);
 }
@@ -741,7 +741,7 @@ img {
   }
 }
 
-/* Responsive Utilities */
+
 .responsive-grid {
   display: grid;
   gap: 30px;

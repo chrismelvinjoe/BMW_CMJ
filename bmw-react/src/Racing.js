@@ -8,7 +8,7 @@ const Racing = () => {
 
     return (
         <div className="racing-page">
-            {/* Hero Section */}
+            
             <header className="racing-hero">
                 <video
                     src="/assets/videos/BMW%20Hypercar%20Main.mp4"
@@ -33,7 +33,7 @@ const Racing = () => {
             </header>
 
             <main className="racing-content">
-                {/* Intro Section */}
+                
                 <section className="racing-intro">
                     <div className="racing-intro-text">
                         <span className="racing-hero-eyebrow">THE_VISION_ANNOTATION</span>
@@ -57,7 +57,7 @@ const Racing = () => {
                     </div>
                 </section>
 
-                {/* Stat Strip */}
+                
                 <section className="racing-stats">
                     <div className="racing-stat">
                         <span className="racing-stat-value">640</span>
@@ -73,7 +73,7 @@ const Racing = () => {
                     </div>
                 </section>
 
-                {/* Timeline Section */}
+                
                 <section className="racing-timeline">
                     <div className="racing-timeline-header">
                         <span className="racing-hero-eyebrow">DEVELOPMENT_TIMELINE</span>
@@ -128,7 +128,7 @@ const Racing = () => {
                     </div>
                 </section>
 
-                {/* Blueprint Gallery (Before Used Images) */}
+                
                 <section className="racing-gallery">
                     <div className="racing-timeline-header">
                         <span className="racing-hero-eyebrow">BLUEPRINT_ARCHIVE</span>

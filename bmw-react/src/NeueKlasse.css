@@ -1,6 +1,4 @@
-/* ================================================
-    NEUE KLASSE - Electric Lightning Theme
-    ================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@200;300;400;700&display=swap');
 
 .neue-page {
@@ -13,7 +11,7 @@
     position: relative;
 }
 
-/* --- Lightning Sparks --- */
+
 .lightning-field {
     position: fixed;
     inset: 0;
@@ -47,7 +45,7 @@
     }
 }
 
-/* --- Animated Lightning Background --- */
+
 .neue-page::before {
     content: '';
     position: fixed;
@@ -57,7 +55,7 @@
     z-index: 0;
 }
 
-/* --- Hero Section --- */
+
 .neue-hero {
     position: relative;
     width: 100%;
@@ -155,7 +153,7 @@
     max-width: 580px;
 }
 
-/* --- Content Wrapper --- */
+
 .neue-content {
     position: relative;
     z-index: 1;
@@ -193,7 +191,7 @@
     margin-bottom: 2rem;
 }
 
-/* --- Stats Board --- */
+
 .neue-stats {
     display: flex;
     justify-content: space-between;
@@ -242,7 +240,7 @@
     color: #555;
 }
 
-/* --- Media Gallery with Current Borders --- */
+
 .neue-media-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -287,7 +285,7 @@
     filter: brightness(0.8);
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 1024px) {
     .neue-hero-title {
         font-size: 3.5rem;

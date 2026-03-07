@@ -1,6 +1,4 @@
-/* ================================================
-    BMW M3 - Mexican Heritage Theme
-    ================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@200;300;400;600&display=swap');
 
 .m3-page {
@@ -20,7 +18,7 @@
     font-family: 'Chat Favour', sans-serif;
 }
 
-/* --- Signature Legacy Section --- */
+
 .m3-signature-section {
     width: 100%;
     min-height: 80vh;
@@ -123,7 +121,7 @@
     font-size: 1.2rem;
 }
 
-/* --- Gallery Visual Polish --- */
+
 .carousel-slide {
     position: relative;
     overflow: hidden;
@@ -149,7 +147,7 @@
     transform: scale(1.1);
 }
 
-/* --- Papel Picado Header --- */
+
 .papel-picado-header {
     position: absolute;
     top: 0;
@@ -213,7 +211,7 @@
     animation-delay: -3s;
 }
 
-/* --- Talavera Borders --- */
+
 .m3-scrolly-image {
     width: 60%;
     max-width: 850px;
@@ -260,7 +258,7 @@
     max-width: 750px;
     text-align: center;
     color: #fdf5e6;
-    /* Old Lace / Warm Ivory */
+    
 }
 
 .scrolly-text h2 {
@@ -285,7 +283,7 @@
     letter-spacing: 2px;
 }
 
-/* --- Expanding Flex Accordion Gallery --- */
+
 .m3-gallery-accordion-section {
     display: flex;
     flex-direction: row;
@@ -401,7 +399,7 @@
     color: rgba(245, 245, 245, 0.7);
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 1024px) {
     .m3-gallery-section {
         flex-direction: column;

@@ -13,43 +13,43 @@ function Navbar() {
     if (e.key === 'Enter') {
       const q = searchQuery.toLowerCase();
 
-      // Racing Page
+
       if (q.includes('rac') || q.includes('gt') || q.includes('motor')) {
         navigate('/racing');
       }
-      // BMW M Page (Hero shortcut)
+
       else if (q === 'm' || q.includes('bmw m') || q.includes('perf')) {
         navigate('/BMWM');
       }
-      // BMW M3 Page 
+
       else if (q.includes('m3')) {
         navigate('/bmw-m3');
       }
-      // Neue Klasse Page
+
       else if (q.includes('neue') || q.includes('klasse') || q.includes('elec') || q.includes('ev') || q.includes('future')) {
         navigate('/neue-klasse');
       }
-      // Garmisch Page
+
       else if (q.includes('garmisch') || q.includes('concept') || q.includes('bertone') || q.includes('gold')) {
         navigate('/garmisch');
       }
-      // Evolution Page
+
       else if (q.includes('evol') || q.includes('hist') || q.includes('past')) {
         navigate('/evolution');
       }
-      // Interior Page
+
       else if (q.includes('inter') || q.includes('inside') || q.includes('cabin') || q.includes('leather')) {
         navigate('/interior');
       }
-      // All Models Page
+
       else if (q.includes('model') || q.includes('all') || q.includes('car') || q.includes('sedan') || q.includes('suv')) {
         navigate('/models');
       }
-      // Home Page mapping
+
       else if (q.includes('home') || q.includes('main')) {
         navigate('/');
       }
-      // Default fallback for any unmapped search
+
       else if (q.trim() !== '') {
         navigate('/models');
       }
@@ -65,7 +65,7 @@ function Navbar() {
       const y = window.scrollY || 0;
       if (y > lastY && y > 20) {
         setHidden(true);
-        setMenuOpen(false); // Close menu on scroll
+        setMenuOpen(false);
       } else {
         setHidden(false);
       }

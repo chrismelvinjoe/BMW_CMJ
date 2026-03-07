@@ -7,13 +7,13 @@ const BMWM3 = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        // Intersection Observer for Simple Scrollytelling transitions
+
         observer.current = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 } else {
-                    // Optional: remove visible class to re-trigger animation when scrolling back up
+
                     entry.target.classList.remove('visible');
                 }
             });
@@ -34,7 +34,7 @@ const BMWM3 = () => {
 
     return (
         <div className="m3-page">
-            {/* Papel Picado Header */}
+            
             <div className="papel-picado-header">
                 <div className="papel-flag flag-burnt"></div>
                 <div className="papel-flag flag-orange"></div>
@@ -84,7 +84,7 @@ const BMWM3 = () => {
                     <img src="/assets/images/BMW E30 M3 hanging(1).jpg" alt="BMW E30 M3 hanging 1" className="m3-scrolly-image" />
                 </div>
 
-                {/* Signature Legacy Section */}
+                
                 <div className="m3-signature-section">
                     <div className="sunset-halo"></div>
                     <div className="signature-content">

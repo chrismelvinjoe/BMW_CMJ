@@ -17,7 +17,7 @@ const NeueKlasse = () => {
                     }}></div>
                 ))}
             </div>
-            {/* Hero */}
+            
             <div className="neue-hero">
                 <img
                     src="/assets/images/BMW%20Neue%20Klasse.jpg"
@@ -35,9 +35,9 @@ const NeueKlasse = () => {
                 </div>
             </div>
 
-            {/* Content */}
+            
             <div className="neue-content">
-                {/* Vision Section */}
+                
                 <div className="neue-section">
                     <div className="neue-section-label">
                         <span></span> Vision
@@ -51,7 +51,7 @@ const NeueKlasse = () => {
                     </p>
                 </div>
 
-                {/* Stats */}
+                
                 <div className="neue-stats">
                     <div className="neue-stat">
                         <span className="neue-stat-value">800V</span>
@@ -71,7 +71,7 @@ const NeueKlasse = () => {
                     </div>
                 </div>
 
-                {/* Features */}
+                
                 <div className="neue-section">
                     <div className="neue-section-label">
                         <span></span> Innovation
@@ -104,7 +104,7 @@ const NeueKlasse = () => {
                     </div>
                 </div>
 
-                {/* Design Section */}
+                
                 <div className="neue-section">
                     <div className="neue-section-label">
                         <span></span> Design Language

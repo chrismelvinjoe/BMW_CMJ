@@ -1,12 +1,10 @@
-/* ================================================
-    RACING PAGE - 3D Technical Sketch Theme
-    ================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=JetBrains+Mono:wght@300;700&display=swap');
 
 .racing-page {
     min-height: 100vh;
     background-color: #0a0c10;
-    /* Deep charcoal/blueprint blue */
+    
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
@@ -17,13 +15,13 @@
     overflow-x: hidden;
 }
 
-/* --- 3D Sketch Layer Utility --- */
+
 .sketch-3d-wrap {
     position: relative;
     perspective: 1000px;
 }
 
-/* --- Hero Section --- */
+
 .racing-hero {
     position: relative;
     width: 100%;
@@ -114,14 +112,14 @@
     text-align: left;
 }
 
-/* --- Content Wrapper --- */
+
 .racing-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 40px;
 }
 
-/* --- Intro Section (3D Sketch Layers) --- */
+
 .racing-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,7 +168,7 @@
     transform: scale(1.02);
 }
 
-/* --- Stats Strip --- */
+
 .racing-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -202,7 +200,7 @@
     letter-spacing: 2px;
 }
 
-/* --- Timeline (3D Exploded View) --- */
+
 .racing-timeline-header h2 {
     font-size: 4rem;
     text-align: center;
@@ -276,7 +274,7 @@
     transform: skewY(0) scale(1.05);
 }
 
-/* --- Blueprint Gallery --- */
+
 .racing-gallery {
     margin-top: 150px;
 }
@@ -301,7 +299,7 @@
     transform: scale(1.02);
 }
 
-/* --- 3D Sketch Layer Effect --- */
+
 .sketch-3d-wrap {
     position: relative;
     overflow: visible;
@@ -330,7 +328,7 @@
     pointer-events: none;
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 768px) {
     .racing-hero-title {
         font-size: 3.5rem;

@@ -1,6 +1,4 @@
-/* ================================================
-   GARMISCH CONCEPT - Premium Heritage Page Styles
-   ================================================ */
+
 
 .garmisch-page {
     min-height: 100vh;
@@ -11,7 +9,7 @@
     overflow-x: hidden;
 }
 
-/* --- Hero Section --- */
+
 .garmisch-hero {
     position: relative;
     width: 100%;
@@ -105,14 +103,14 @@
     max-width: 560px;
 }
 
-/* --- Content Wrapper --- */
+
 .garmisch-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 40px 140px;
 }
 
-/* --- Intro Block --- */
+
 .garmisch-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -191,7 +189,7 @@
     transform: scale(1.06);
 }
 
-/* --- Story Timeline --- */
+
 .garmisch-timeline {
     position: relative;
     margin-bottom: 140px;
@@ -340,7 +338,7 @@
     transform: scale(1.06);
 }
 
-/* --- Design Details --- */
+
 .garmisch-design {
     margin-bottom: 140px;
 }
@@ -445,7 +443,7 @@
     transform: translateY(0);
 }
 
-/* --- Stat Strip --- */
+
 .garmisch-stats {
     display: flex;
     justify-content: center;
@@ -488,7 +486,7 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* --- Quote Block --- */
+
 .garmisch-quote {
     text-align: center;
     padding: 80px 0;
@@ -529,7 +527,7 @@
     color: #c8a96e;
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 1024px) {
     .garmisch-intro {
         grid-template-columns: 1fr;

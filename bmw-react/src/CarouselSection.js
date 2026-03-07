@@ -34,7 +34,7 @@ function CarouselSection() {
     setCurrentIndex((prevIndex) => {
       if (prevIndex >= maxIndex) {
         setIsTransitionEnabled(false);
-        // Using 50ms to allow the browser to paint the translation skip before re-enabling transitions
+
         setTimeout(() => setIsTransitionEnabled(true), 50);
         return 0;
       }
@@ -47,7 +47,7 @@ function CarouselSection() {
     setCurrentIndex((prevIndex) => {
       if (prevIndex <= 0) {
         setIsTransitionEnabled(false);
-        // Using 50ms to allow the browser to paint the translation skip before re-enabling transitions
+
         setTimeout(() => setIsTransitionEnabled(true), 50);
         return maxIndex;
       }
@@ -308,7 +308,7 @@ function CarouselSection() {
           </div>
         </div>
 
-        {/* Expanding Flex Accordion Gallery */}
+        
         <div className="m3-gallery-accordion-section" style={{ marginTop: "80px" }}>
           <div className="m3-gallery-accordion">
             <div className="accordion-panel">

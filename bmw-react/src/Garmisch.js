@@ -8,7 +8,7 @@ const Garmisch = () => {
 
     return (
         <div className="garmisch-page">
-            {/* Hero Section */}
+            
             <header className="garmisch-hero">
                 <img
                     src="/assets/images/BMW%20Garmisch.jpg"
@@ -32,7 +32,7 @@ const Garmisch = () => {
             </header>
 
             <main className="garmisch-content">
-                {/* Intro Section */}
+                
                 <section className="garmisch-intro">
                     <div className="garmisch-intro-text">
                         <div className="section-eyebrow">
@@ -61,7 +61,7 @@ const Garmisch = () => {
                     </div>
                 </section>
 
-                {/* Stat Strip */}
+                
                 <section className="garmisch-stats">
                     <div className="garmisch-stat">
                         <span className="garmisch-stat-value">2002</span>
@@ -77,7 +77,7 @@ const Garmisch = () => {
                     </div>
                 </section>
 
-                {/* Timeline Section */}
+                
                 <section className="garmisch-timeline">
                     <div className="garmisch-timeline-header">
                         <div className="section-eyebrow">
@@ -89,7 +89,7 @@ const Garmisch = () => {
                     <div className="garmisch-timeline-line"></div>
 
                     <div className="garmisch-timeline-items">
-                        {/* 1970 */}
+                        
                         <div className="garmisch-timeline-item">
                             <div className="garmisch-tl-text">
                                 <span className="garmisch-tl-year">1970</span>
@@ -108,7 +108,7 @@ const Garmisch = () => {
                             </div>
                         </div>
 
-                        {/* The Disappearance */}
+                        
                         <div className="garmisch-timeline-item">
                             <div className="garmisch-tl-text">
                                 <span className="garmisch-tl-year">???</span>
@@ -127,7 +127,7 @@ const Garmisch = () => {
                             </div>
                         </div>
 
-                        {/* 2019 */}
+                        
                         <div className="garmisch-timeline-item">
                             <div className="garmisch-tl-text">
                                 <span className="garmisch-tl-year">2019</span>
@@ -148,7 +148,7 @@ const Garmisch = () => {
                     </div>
                 </section>
 
-                {/* Quote Block */}
+                
                 <section className="garmisch-quote">
                     <blockquote>
                         "We wanted to create a modern mid-sized coupe that was faithful to BMW's design language,
@@ -157,7 +157,7 @@ const Garmisch = () => {
                     <cite>— Marcello Gandini</cite>
                 </section>
 
-                {/* Design Grid */}
+                
                 <section className="garmisch-design">
                     <div className="garmisch-design-header">
                         <div className="section-eyebrow">

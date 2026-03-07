@@ -35,7 +35,7 @@ function Hero() {
           onMouseLeave={() => setBMWMHover(false)}
           onClick={() => navigate('/BMWM')}
         >
-          {/* Invisible SVG Filter for the Liquid Glass */}
+          
           <svg style={{ display: "none" }}>
             <filter id="hero-lg-dist" x="0%" y="0%" width="100%" height="100%">
               <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
@@ -44,7 +44,7 @@ function Hero() {
             </filter>
           </svg>
 
-          {/* The Liquid Glass Slab */}
+          
           <div style={{
             position: "absolute",
             inset: 0,
@@ -53,14 +53,14 @@ function Hero() {
             borderRadius: "inherit",
             overflow: "hidden"
           }}>
-            {/* The actual distortion filter layer */}
+            
             <div style={{
               position: "absolute",
               inset: 0,
               backdropFilter: "blur(2px)",
               filter: "url(#hero-lg-dist)",
               isolation: "isolate",
-              opacity: BMWMHover ? 0.5 : 1, /* Fade out distortion on hover */
+              opacity: BMWMHover ? 0.5 : 1, 
               transition: "opacity 0.4s ease"
             }}></div>
           </div>
