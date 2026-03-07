@@ -16,6 +16,7 @@ import Garmisch from "./Garmisch";
 import Racing from './Racing';
 import Interior from "./Interior";
 import Footer from "./Footer";
+import CustomCursor from "./CustomCursor";
 
 function Home() {
   return (
@@ -173,6 +174,7 @@ function App() {
           @font-face { font-family: 'Nose Transport 9 ThinSquare'; src: url('/assets/fonts/nose_tansport/Nose Transport/Web/NoseTransport9-ThinSquare.woff2') format('woff2'); }
         `}
       </style>
+      <CustomCursor />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

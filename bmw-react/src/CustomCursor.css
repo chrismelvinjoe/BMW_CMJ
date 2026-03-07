@@ -1,0 +1,57 @@
+.custom-cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-cursor-container.visible {
+    opacity: 1;
+}
+
+.cursor-dot {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.cursor-ring {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(1px);
+}
+
+/* Hover State */
+.custom-cursor-container.hovering .cursor-ring {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: -30px;
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.custom-cursor-container.hovering .cursor-dot {
+    transform: scale(0.5);
+    background-color: #0066b1;
+    /* BMW Blue */
+}
+
+/* Global cursor hidden rule will be in App.css */
