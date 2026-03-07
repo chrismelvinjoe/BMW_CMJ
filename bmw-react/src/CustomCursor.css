@@ -32,7 +32,8 @@
     left: -20px;
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(177, 177, 177, 0.8);
+    border: 1px solid rgba(177, 177, 177, 0.4);
+    box-shadow: 0 0 50px rgba(177, 177, 177, 0.8);
     border-radius: 50%;
     transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, border-color 0.3s ease;
     overflow: hidden;
@@ -42,11 +43,11 @@
 .liquid-glass-inner {
     position: absolute;
     inset: -10px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     filter: url(#cursor-lg-dist);
     background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 /* Hover State */
@@ -60,12 +61,12 @@
 
 .custom-cursor-container.hovering .liquid-glass-inner {
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(2px);
 }
 
 .custom-cursor-container.hovering .cursor-dot {
     transform: scale(0.5);
-    background-color: #0066b1;
+    background-color: #b4b4b4;
     /* BMW Blue */
 }
 
