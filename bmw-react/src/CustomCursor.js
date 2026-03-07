@@ -66,8 +66,19 @@ const CustomCursor = () => {
 
     return (
         <div className={`custom-cursor-container ${isVisible ? 'visible' : ''} ${isHovering ? 'hovering' : ''}`}>
+            <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+                <filter id="cursor-lg-dist" x="-50%" y="-50%" width="200%" height="200%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" seed="1" result="noise">
+                        <animate attributeName="seed" from="1" to="100" dur="10s" repeatCount="indefinite" />
+                    </feTurbulence>
+                    <feGaussianBlur in="noise" stdDeviation="3" result="blurred" />
+                    <feDisplacementMap in="SourceGraphic" in2="blurred" scale="25" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+            </svg>
             <div ref={dotRef} className="cursor-dot" />
-            <div ref={ringRef} className="cursor-ring" />
+            <div ref={ringRef} className="cursor-ring">
+                <div className="liquid-glass-inner" />
+            </div>
         </div>
     );
 };

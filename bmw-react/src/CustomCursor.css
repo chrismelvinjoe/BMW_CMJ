@@ -35,17 +35,32 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, border-color 0.3s ease;
-    backdrop-filter: blur(1px);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.liquid-glass-inner {
+    position: absolute;
+    inset: -10px;
+    backdrop-filter: blur(4px);
+    filter: url(#cursor-lg-dist);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
 }
 
 /* Hover State */
 .custom-cursor-container.hovering .cursor-ring {
-    width: 60px;
-    height: 60px;
-    top: -30px;
-    left: -30px;
-    border-color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: -40px;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.custom-cursor-container.hovering .liquid-glass-inner {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
 }
 
 .custom-cursor-container.hovering .cursor-dot {
