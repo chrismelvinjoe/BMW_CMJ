@@ -5,13 +5,14 @@
   padding: 120px 20px 40px;
   position: relative;
   box-sizing: border-box;
+  font-family: 'Nuqun', sans-serif;
 }
 
 .models-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -19,17 +20,18 @@
 }
 
 .header-content h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 0;
-  margin-bottom: 8px;
+  margin-bottom: -10px;
   color: #FFFFFF;
-  letter-spacing: -0.5px;
+  letter-spacing: 2px;
 }
 
 .header-content p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #FFFFFF;
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .category-labels {
@@ -186,7 +188,7 @@
   background: #000000;
   color: #FFFFFF;
   padding: 6px 12px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -204,11 +206,11 @@
 }
 
 .model-info h3 {
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: 20;
   margin-bottom: 12px;
   color: #FFFFFF;
-  font-family: 'Kundam', sans-serif;
+  font-family: 'Nuqun', sans-serif;
   letter-spacing: -0.3px;
 }
 
@@ -220,7 +222,7 @@
 }
 
 .model-type {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #FFFFFF;
   background: #000000;
   padding: 0px 12px;
@@ -234,7 +236,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #FFFFFF;
   background: #000000;
   padding: 4px 0px;
@@ -265,8 +267,8 @@
 }
 
 .price {
-  font-size: 1.2rem;
-  color: #FFFFFF; 
+  font-size: 2.5rem;
+  color: #FFFFFF;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -277,27 +279,27 @@
     gap: 20px;
     text-align: center;
   }
-  
+
   .header-content h1 {
     font-size: 2rem;
   }
-  
+
   .category-labels {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .category-label {
     text-align: center;
   }
-  
+
   .models-container {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
   }
-  
+
   .all-models-page {
     padding: 100px 15px 30px;
   }
@@ -307,12 +309,12 @@
   .models-container {
     grid-template-columns: 1fr;
   }
-  
+
   .category-label {
     padding: 6px 12px;
     font-size: 0.8rem;
   }
-  
+
   .model-card {
     max-width: 350px;
     margin: 0 auto;

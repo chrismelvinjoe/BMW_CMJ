@@ -1,0 +1,459 @@
+/* ================================================
+    BMW M3 - Mexican Heritage Theme
+    ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@200;300;400;600&display=swap');
+
+.m3-page {
+    background-color: #1a0f0f;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(44, 26, 26, 0.8) 0%, #000 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    padding-top: 150px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Chat Favour', sans-serif;
+}
+
+/* --- Signature Legacy Section --- */
+.m3-signature-section {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #110909;
+    overflow: hidden;
+    padding: 100px 20px;
+    margin-top: 100px;
+}
+
+.sunset-halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 183, 0, 0.15) 0%, rgba(220, 20, 60, 0.05) 50%, transparent 70%);
+    filter: blur(80px);
+    z-index: 1;
+}
+
+.signature-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.heritage-badge {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #ffb700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 2rem;
+}
+
+.signature-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.signature-content p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: rgba(245, 245, 245, 0.8);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.signature-line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffb700, transparent);
+    margin: 3rem auto;
+}
+
+.signature-footer {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(255, 183, 0, 0.5);
+}
+
+.gold-leaf-border {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffb700, #ffb700, transparent);
+    opacity: 0.3;
+}
+
+.top-leaf {
+    top: 0;
+}
+
+.bottom-leaf {
+    bottom: 0;
+}
+
+.gold-leaf-border::after {
+    content: '✧';
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    color: #ffb700;
+    font-size: 1.2rem;
+}
+
+/* --- Gallery Visual Polish --- */
+.carousel-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent, rgba(26, 15, 15, 0.3));
+    pointer-events: none;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    filter: sepia(0.25) contrast(1.1) brightness(0.9);
+    transition: transform 10s linear;
+}
+
+.slick-active .carousel-slide img {
+    transform: scale(1.1);
+}
+
+/* --- Papel Picado Header --- */
+.papel-picado-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.papel-flag {
+    width: 120px;
+    height: 160px;
+    background-color: var(--flag-color);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    transform-origin: top center;
+    animation: papel-sway 4s infinite ease-in-out;
+    position: relative;
+}
+
+.papel-flag::after {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    mask-image: radial-gradient(circle, transparent 30%, black 100%);
+}
+
+@keyframes papel-sway {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) skewX(2deg);
+    }
+
+    50% {
+        transform: rotate(5deg) skewX(-2deg);
+    }
+}
+
+.flag-burnt {
+    --flag-color: #BF5315;
+    animation-delay: 0s;
+}
+
+.flag-orange {
+    --flag-color: #F28705;
+    animation-delay: -1s;
+}
+
+.flag-amber {
+    --flag-color: #F29F05;
+    animation-delay: -2s;
+}
+
+.flag-cream {
+    --flag-color: #F2F2F2;
+    animation-delay: -3s;
+}
+
+/* --- Talavera Borders --- */
+.m3-scrolly-image {
+    width: 60%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+    object-fit: cover;
+    padding: 12px;
+    background: #000000;
+    border: 8px solid;
+    --flag-color: #F28705;
+    border-image: repeating-conic-gradient(#F29F05 0% 25%, #F28705 25% 50%) 8;
+}
+
+.m3-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45vh;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 150px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.scrolly-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolly-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scrolly-text {
+    width: 60%;
+    max-width: 750px;
+    text-align: center;
+    color: #fdf5e6;
+    /* Old Lace / Warm Ivory */
+}
+
+.scrolly-text h2 {
+    font-family: 'chat favour', serif;
+    font-size: 6rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-transform: none;
+    background: linear-gradient(135deg, #ffb700 0%, #dc143c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scrolly-text p {
+    font-size: 2rem;
+    line-height: 2;
+    color: rgba(253, 245, 230, 0.8);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* --- Expanding Flex Accordion Gallery --- */
+.m3-gallery-accordion-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: #1a0f0f;
+    border: 1px solid rgba(255, 183, 0, 0.2);
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.m3-gallery-accordion-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(200, 50, 0, 0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.m3-gallery-accordion {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 650px;
+    z-index: 2;
+    width: 100%;
+}
+
+.accordion-panel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+    border-right: 1px solid rgba(255, 183, 0, 0.1);
+}
+
+.accordion-panel:last-child {
+    border-right: none;
+}
+
+.accordion-panel:hover {
+    flex: 3;
+}
+
+.accordion-panel img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.3) contrast(1.1) brightness(0.6);
+    transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s ease-out;
+}
+
+.accordion-panel:hover img {
+    filter: sepia(0.1) contrast(1.1) brightness(1.1);
+    transform: translate(-50%, -50%) scale(1.03);
+}
+
+.m3-gallery-text {
+    flex: 0.8;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a0f0f 0%, #2c1a1a 100%);
+    z-index: 2;
+}
+
+.m3-gallery-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffb700;
+    margin-bottom: 2rem;
+}
+
+.m3-gallery-label span {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #ffb700;
+}
+
+.m3-gallery-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #f5f5f5;
+}
+
+.m3-gallery-text p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: rgba(245, 245, 245, 0.7);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .m3-gallery-section {
+        flex-direction: column;
+    }
+
+    .m3-scrolly-image {
+        width: 85%;
+        border-width: 4px;
+    }
+
+    .scrolly-text h2 {
+        font-size: 3.5rem;
+    }
+
+    .m3-gallery-text {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .papel-flag {
+        width: 80px;
+        height: 110px;
+    }
+
+    .scrolly-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .m3-gallery-accordion-section {
+        flex-direction: column;
+    }
+
+    .m3-gallery-accordion {
+        flex-direction: column;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .accordion-panel {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 183, 0, 0.1);
+        min-height: 100px;
+        transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease, min-height 0.6s ease;
+    }
+
+    .accordion-panel:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-panel:hover {
+        flex: 3;
+        min-height: 300px;
+    }
+}

@@ -20,13 +20,9 @@ function Hero() {
       }}
     >
       <div className="text1">
-        <h1 style={{ fontSize: "50px", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>BMW</h1>
-        <h1 style={{ fontSize: "20px", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Bavarian Motor Works</h1>
-        <br />
-        <br />
         <button
           type="button"
-          className="button button1"
+          className="button btn-liquid-glass"
           style={BMWMHover ? {
             backgroundImage: 'url("/assets/images/BMW-M-logo.png")',
             backgroundPosition: "center",
@@ -39,8 +35,53 @@ function Hero() {
           onMouseLeave={() => setBMWMHover(false)}
           onClick={() => navigate('/BMWM')}
         >
-          BMW M
+          {/* Invisible SVG Filter for the Liquid Glass */}
+          <svg style={{ display: "none" }}>
+            <filter id="hero-lg-dist" x="0%" y="0%" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+              <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+              <feDisplacementMap in="SourceGraphic" in2="blurred" scale="50" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </svg>
+
+          {/* The Liquid Glass Slab */}
+          <div style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 0,
+            pointerEvents: "none",
+            borderRadius: "inherit",
+            overflow: "hidden"
+          }}>
+            {/* The actual distortion filter layer */}
+            <div style={{
+              position: "absolute",
+              inset: 0,
+              backdropFilter: "blur(2px)",
+              filter: "url(#hero-lg-dist)",
+              isolation: "isolate",
+              opacity: BMWMHover ? 0.5 : 1, /* Fade out distortion on hover */
+              transition: "opacity 0.4s ease"
+            }}></div>
+          </div>
         </button>
+
+        <h1 style={{
+          fontSize: "20px",
+          fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+          fontWeight: "300",
+          letterSpacing: "8px",
+          color: "#e6e6e6",
+          marginTop: "10px",
+          textTransform: "uppercase"
+        }}>Bavarian Motor Works</h1>
+        <h1 style={{
+          fontSize: "65px",
+          fontFamily: "'Mirano', sans-serif",
+          fontWeight: "normal",
+          letterSpacing: "15px",
+          textTransform: "uppercase"
+        }}>BMW</h1>
       </div>
     </div>
   );

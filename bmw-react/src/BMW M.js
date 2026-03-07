@@ -26,17 +26,38 @@ function BMWM() {
     return () => clearInterval(interval);
   }, [m4gtImages.length, isPaused]);
 
+  const sparkColors = ["blue-light", "blue-dark", "red"];
+
   return (
-    <article>
-      <div className="m-sport-stripe"></div>
+    <article className="bmw-m-page">
+      <div className="m-lightning-field">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className={`m-spark ${sparkColors[i % 3]}`} style={{
+            top: `${Math.random() * 100}vh`,
+            left: `${Math.random() * 20 - 10}vw`,
+            animationDelay: `${Math.random() * 8}s`,
+            animationDuration: `${4 + Math.random() * 4}s`
+          }}></div>
+        ))}
+      </div>
+      <div className="m-sport-stripe" style={{
+        height: "5px",
+        width: "100%",
+        background: "linear-gradient(to right, #0066cc 33.33%, #001240 33.33%, #001240 66.66%, #E21C26 66.66%)",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 2000,
+        opacity: 0.9
+      }}></div>
       <Navbar />
       <main className="bmwm-article">
         <div className="article-container">
-          <div className="video-section"> 
-            <video 
-              src="/assets/videos/BMWM Airlines.mp4" 
-              autoPlay 
-              muted 
+          <div className="video-section">
+            <video
+              src="/assets/videos/BMWM Airlines.mp4"
+              autoPlay
+              muted
               loop
               className="article-video"
             >
@@ -46,19 +67,17 @@ function BMWM() {
           <div className="content-section">
             <div className="article-header">
               <span className="article-tag">BMW MOTORSPORT</span>
-              <h1 className="article-title">BMW M – Born from Motorsport</h1>
+              <h1 className="article-title">Born from Motorsport</h1>
             </div>
             <div className="article-body">
               <p>
-                From the legendary M1 supercar to today's M3, M4, and M5 models, BMW M continues 
-                to push the boundaries of automotive performance. Each M vehicle combines 
-                race-bred technology with everyday usability, delivering an uncompromising 
-                driving experience that defines the essence of "The Ultimate Driving Machine."
+                Welcome to BMW AIRLINES. Prepare for a high-intensity flight where performance
+                knows no gravity. From the legendary M1 to the latest precision-engineered
+                M-Series, we redefine the threshold of speed and agility.
               </p>
               <p>
-                Experience pure adrenaline with BMW M's signature features: high-revving engines, 
-                precision-tuned chassis, aggressive aerodynamics, and the iconic M badge that 
-                represents 50+ years of motorsport excellence.
+                Engage "M-Flight Mode". Experience the uncompromising force of "The Ultimate
+                Driving Machine" as it transitions from road to track with lethal efficiency.
               </p>
             </div>
           </div>
@@ -72,7 +91,7 @@ function BMWM() {
             alignItems: "center",
             flexDirection: "column"
           }}>
-            <div 
+            <div
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
               style={{
@@ -87,7 +106,7 @@ function BMWM() {
                 height: "525px",
                 overflow: "hidden",
               }}>
-                <img 
+                <img
                   src={m4gtImages[currentIndex]}
                   alt="BMW M4 GT"
                   style={{
@@ -103,7 +122,7 @@ function BMWM() {
                 height: "525px",
                 overflow: "hidden",
               }}>
-                <img 
+                <img
                   src={m4gtImages[currentIndex + 1]}
                   alt="BMW M4 GT"
                   style={{
@@ -126,52 +145,70 @@ function BMWM() {
                   fontSize: "2.8rem",
                   fontWeight: "900",
                   margin: "0 0 15px 0",
-                  fontFamily: "'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+                  fontFamily: "'Red Planet', sans-serif",
                   textTransform: "uppercase",
                   letterSpacing: "2px",
                   textShadow: "0 0 30px rgba(25, 118, 210, 0.3)"
                 }}>
-                  THE BMW M4 GT3 EVO:
+                  THE BMW M4 GT3 EVO
                 </h2>
+
                 <h3 style={{
                   color: "#ffffff",
-                  fontSize: "2.4rem",
+                  fontSize: "2rem",
                   fontWeight: "700",
                   margin: "0 0 25px 0",
-                  fontFamily: "'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+                  fontFamily: "'Red Planet', sans-serif",
                   textTransform: "uppercase",
                   letterSpacing: "3px",
                   textShadow: "0 0 20px rgba(255, 255, 255, 0.2)"
                 }}>
                   RACING PERFECTION
                 </h3>
-                <p style={{
-                  color: "#e0e0e0",
-                  fontSize: "1.2rem",
-                  lineHeight: "1.8",
-                  margin: "0 0 25px 0",
-                  fontFamily: "'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
-                  fontWeight: "300",
-                  textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)"
-                }}>
-                  Experience the ultimate evolution of motorsport engineering with the BMW M4 GT3 EVO. Built for professional racing, this track-focused machine delivers uncompromising performance with advanced aerodynamics, lightweight construction, and race-proven technology that dominates circuits worldwide.
-                </p>
                 <div style={{
-                  padding: "20px",
+                  padding: "10px",
                   color: "#ffffff",
                   fontSize: "1rem",
-                  fontFamily: "'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+                  fontFamily: "'Corpta', sans-serif",
                   lineHeight: "1.6",
                   fontWeight: "400"
                 }}>
-                  <div style={{ marginBottom: "8px" }}>
-                    <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Engine:</strong> <span style={{ color: "#ffffff" }}>3.0L Twin-Turbo S58 I6</span> • <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Power:</strong> <span style={{ color: "#ffffff" }}>590 HP</span>
+                  <div style={{
+                    padding: "20px",
+                    fontFamily: "'Red Planet', sans-serif",
+                    letterSpacing: "2px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    borderLeft: "4px solid #0066cc",
+                    marginBottom: "20px",
+                    backdropFilter: "blur(10px)"
+                  }}>
+                    <p style={{ margin: 0, fontSize: "0.95rem", opacity: 0.9 }}>
+                      The M4 GT3 EVO represents the pinnacle of M Motorsport engineering.
+                      Developed to dominate endurance circuits worldwide with a race-tuned
+                      precision chassis and optimized aero efficiency.
+                    </p>
                   </div>
-                  <div style={{ marginBottom: "8px" }}>
-                    <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Weight:</strong> <span style={{ color: "#ffffff" }}>1,300 kg</span> • <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Transmission:</strong> <span style={{ color: "#ffffff" }}>6-Speed Sequential</span>
-                  </div>
-                  <div>
-                    <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Aerodynamics:</strong> <span style={{ color: "#ffffff" }}>Carbon Fiber Body Kit</span> • <strong style={{ color: "#42a5f5", fontWeight: "600" }}>Top Speed:</strong> <span style={{ color: "#ffffff" }}>300+ km/h</span>
+
+                  <div style={{
+                    padding: "15px",
+                    fontSize: "0.85rem",
+                    fontFamily: "'JetBrains Mono', monospace",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    background: "rgba(0, 0, 0, 0.3)",
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                    gap: "10px"
+                  }}>
+                    <div><span style={{ color: "#0066cc" }}>[SYS_ID]:</span> S58_3.0L_I6</div>
+                    <div><span style={{ color: "#0066cc" }}>[POWER]:</span> 590_HP</div>
+                    <div><span style={{ color: "#0066cc" }}>[WEIGHT]:</span> 1,300_KG</div>
+                    <div><span style={{ color: "#0066cc" }}>[TRANS]:</span> 6_SPD_SEQ</div>
+                    <div style={{ gridColumn: "span 2", marginTop: "5px", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "5px" }}>
+                      <span style={{ color: "#E21C26" }}>[AERO]:</span> EVO_HIGH_DOWNFORCE_V3
+                    </div>
+                    <div style={{ gridColumn: "span 2" }}>
+                      <span style={{ color: "#fff", opacity: 0.5 }}>[STATUS]:</span> TRACK_VALIDATION_ACTIVE
+                    </div>
                   </div>
                 </div>
               </div>
@@ -210,7 +247,7 @@ function BMWM() {
               >
                 ‹
               </button>
-              
+
               <button
                 onClick={nextSlide}
                 onMouseEnter={(e) => {
@@ -247,40 +284,32 @@ function BMWM() {
               <h2 className="bmwmnxt-title">IT KNOWS YOUR NEXT MOVE</h2>
               <div className="bmwmnxt-text">
                 <p>
-                  Seamless intelligence also means that your car anticipates your next move.
-                </p>
-                <p>
-                  <strong>BMW M NEXT</strong> represents the future of high-performance electric mobility, combining 
-                  BMW M's motorsport DNA with cutting-edge electric technology. This revolutionary concept showcases 
-                  how pure driving emotion and sustainable performance can coexist, delivering instant torque and 
-                  zero emissions without compromising the thrilling M experience.
+                  M NEXT represents the threshold of high-performance electric mobility.
+                  Seamless intelligence means your car anticipates every apex and optimizes
+                  power delivery before you even think of the move.
                 </p>
               </div>
             </div>
             <div className="bmwmnxt-video">
-              <video 
-                src="/assets/videos/BMWM Next.mp4" 
+              <video
+                src="/assets/videos/BMWM Next.mp4"
                 autoPlay i
-                muted 
+                muted
                 loop
                 className="bmwmnxt-video-element"
               >
-                Your browser does not support the video tag.
               </video>
             </div>
           </div>
         </div>
         <div className="rush-video">
-          <div className="rush-text-top-left">United by Performance</div>
-          <div className="rush-text-bottom-right">GEN M</div>
-          <video 
-            src="/assets/videos/The Rush.mp4" 
-            autoPlay 
-            muted 
+          <video
+            src="/assets/videos/The Rush.mp4"
+            autoPlay
+            muted
             loop
             className="article-video"
           >
-            Your browser does not support the video tag.
           </video>
         </div>
       </main>

@@ -1,0 +1,605 @@
+/* ================================================
+   GARMISCH CONCEPT - Premium Heritage Page Styles
+   ================================================ */
+
+.garmisch-page {
+    min-height: 100vh;
+    background-color: #050505;
+    color: #fff;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.garmisch-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.garmisch-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45) sepia(0.15);
+    transition: transform 10s ease-out;
+}
+
+.garmisch-hero:hover .garmisch-hero-img {
+    transform: scale(1.04);
+}
+
+.garmisch-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(5, 5, 5, 0.95) 0%,
+            rgba(5, 5, 5, 0.3) 50%,
+            transparent 100%);
+    z-index: 1;
+}
+
+.garmisch-hero-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 80px 80px;
+    max-width: 800px;
+}
+
+.garmisch-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #c8a96e;
+    margin-bottom: 1.4rem;
+}
+
+.garmisch-hero-eyebrow span {
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: #c8a96e;
+}
+
+.garmisch-hero-year {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(200, 169, 110, 0.5);
+    margin-bottom: 1rem;
+}
+
+.garmisch-hero-title {
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: 8px;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.garmisch-hero-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.garmisch-hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 560px;
+}
+
+/* --- Content Wrapper --- */
+.garmisch-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px 140px;
+}
+
+/* --- Intro Block --- */
+.garmisch-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+.garmisch-intro-text .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #c8a96e;
+    margin-bottom: 1.5rem;
+}
+
+.garmisch-intro-text .section-eyebrow span {
+    width: 20px;
+    height: 1px;
+    background: #c8a96e;
+    display: inline-block;
+}
+
+.garmisch-intro-text h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #fff 0%, #999 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.garmisch-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+}
+
+.garmisch-intro-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.garmisch-intro-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(200, 169, 110, 0.2);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.garmisch-intro-img-wrap video,
+.garmisch-intro-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+    filter: sepia(0.1);
+}
+
+.garmisch-intro-img-wrap:hover video,
+.garmisch-intro-img-wrap:hover img {
+    transform: scale(1.06);
+}
+
+/* --- Story Timeline --- */
+.garmisch-timeline {
+    position: relative;
+    margin-bottom: 140px;
+}
+
+.garmisch-timeline-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.garmisch-timeline-header .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #c8a96e;
+    margin-bottom: 1.5rem;
+}
+
+.garmisch-timeline-header .section-eyebrow span {
+    width: 20px;
+    height: 1px;
+    background: #c8a96e;
+    display: inline-block;
+}
+
+.garmisch-timeline-header h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.garmisch-timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(200, 169, 110, 0.6), transparent);
+    transform: translateX(-50%);
+}
+
+.garmisch-timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.garmisch-timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.garmisch-timeline-item:nth-child(even) .garmisch-tl-text {
+    order: 3;
+    text-align: right;
+}
+
+.garmisch-timeline-item:nth-child(even) .garmisch-tl-dot {
+    order: 2;
+}
+
+.garmisch-timeline-item:nth-child(even) .garmisch-tl-media {
+    order: 1;
+}
+
+.garmisch-tl-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.garmisch-tl-dot-inner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #c8a96e;
+    box-shadow: 0 0 20px rgba(200, 169, 110, 0.5);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.garmisch-tl-dot-inner::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 169, 110, 0.3);
+}
+
+
+
+.garmisch-tl-year {
+    font-size: 3.5rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+    color: rgba(200, 169, 110, 0.3);
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.garmisch-tl-text h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.garmisch-tl-text p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 300;
+}
+
+.garmisch-tl-media {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    border: 1px solid rgba(200, 169, 110, 0.12);
+}
+
+.garmisch-tl-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.9s ease;
+    filter: grayscale(0.2) sepia(0.1);
+}
+
+.garmisch-tl-media:hover img {
+    transform: scale(1.06);
+}
+
+/* --- Design Details --- */
+.garmisch-design {
+    margin-bottom: 140px;
+}
+
+.garmisch-design-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.garmisch-design-header .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #c8a96e;
+    margin-bottom: 1.5rem;
+}
+
+.garmisch-design-header .section-eyebrow span {
+    width: 20px;
+    height: 1px;
+    background: #c8a96e;
+    display: inline-block;
+}
+
+.garmisch-design-header h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.garmisch-design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.garmisch-design-card {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+}
+
+.garmisch-design-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.9s ease, filter 0.6s ease;
+    filter: brightness(0.6) sepia(0.15);
+}
+
+.garmisch-design-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.7) sepia(0.05);
+}
+
+.garmisch-design-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    transition: background 0.5s ease;
+}
+
+.garmisch-design-card:hover .garmisch-design-card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 80%);
+}
+
+.garmisch-design-card-overlay h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.garmisch-design-card-overlay p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    line-height: 1.6;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.garmisch-design-card:hover .garmisch-design-card-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Stat Strip --- */
+.garmisch-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 140px;
+}
+
+.garmisch-stat {
+    flex: 1;
+    text-align: center;
+    padding: 60px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    transition: background 0.4s ease;
+}
+
+.garmisch-stat:last-child {
+    border-right: none;
+}
+
+.garmisch-stat:hover {
+    background: rgba(200, 169, 110, 0.04);
+}
+
+.garmisch-stat-value {
+    font-size: 2.8rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #c8a96e;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.garmisch-stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Quote Block --- */
+.garmisch-quote {
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.garmisch-quote::before {
+    content: '"';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12rem;
+    font-weight: 100;
+    color: rgba(200, 169, 110, 0.07);
+    line-height: 1;
+    font-family: Georgia, serif;
+    pointer-events: none;
+}
+
+.garmisch-quote blockquote {
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-style: italic;
+}
+
+.garmisch-quote cite {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c8a96e;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .garmisch-intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .garmisch-intro-img-wrap {
+        height: 380px;
+    }
+
+    .garmisch-timeline-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .garmisch-tl-dot {
+        display: none;
+    }
+
+    .garmisch-timeline-line {
+        display: none;
+    }
+
+    .garmisch-timeline-item:nth-child(even) .garmisch-tl-text,
+    .garmisch-timeline-item:nth-child(even) .garmisch-tl-media {
+        order: unset;
+        text-align: left;
+    }
+
+    .garmisch-design-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .garmisch-hero-title {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .garmisch-hero-overlay {
+        padding: 40px 24px;
+    }
+
+    .garmisch-hero {
+        height: 70vh;
+    }
+
+    .garmisch-content {
+        padding: 80px 20px 100px;
+    }
+
+    .garmisch-design-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .garmisch-stats {
+        flex-direction: column;
+    }
+
+    .garmisch-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .garmisch-quote blockquote {
+        font-size: 1.2rem;
+    }
+
+    .garmisch-tl-media {
+        height: 220px;
+    }
+}

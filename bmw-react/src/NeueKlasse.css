@@ -1,0 +1,324 @@
+/* ================================================
+    NEUE KLASSE - Electric Lightning Theme
+    ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@200;300;400;700&display=swap');
+
+.neue-page {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding-top: 100px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- Lightning Sparks --- */
+.lightning-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.spark {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #00f2ff, transparent);
+    opacity: 0;
+    animation: spark-fall 4s linear infinite;
+}
+
+@keyframes spark-fall {
+    0% {
+        transform: translateY(-10vh) scaleY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(20vh) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(120vh) scaleY(0.5);
+        opacity: 0;
+    }
+}
+
+/* --- Animated Lightning Background --- */
+.neue-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* --- Hero Section --- */
+.neue-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.neue-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f2ff, #7000ff, transparent);
+    animation: flow 3s linear infinite;
+    z-index: 3;
+}
+
+@keyframes flow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.neue-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.1);
+    transition: transform 10s ease-out;
+}
+
+.neue-hero:hover .neue-hero-img {
+    transform: scale(1.05);
+}
+
+.neue-hero-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 80px;
+    max-width: 800px;
+}
+
+.neue-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #00f2ff;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.neue-hero-label span {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #00f2ff;
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+.neue-hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 30%, #00f2ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.3));
+}
+
+.neue-hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+/* --- Content Wrapper --- */
+.neue-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 120px 40px;
+}
+
+.neue-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+
+.neue-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #00f2ff;
+    box-shadow: 0 0 15px #00f2ff;
+}
+
+.neue-section p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* --- Stats Board --- */
+.neue-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 80px 0 120px;
+    background: rgba(0, 242, 255, 0.02);
+}
+
+.neue-stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #00f2ff;
+    display: block;
+    margin-bottom: 10px;
+    animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff, 0 0 40px #00f2ff;
+    }
+
+    20%,
+    22%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+.neue-stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #555;
+}
+
+/* --- Media Gallery with Current Borders --- */
+.neue-media-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.neue-media-item {
+    position: relative;
+    padding: 2px;
+    background: rgba(0, 242, 255, 0.2);
+    overflow: hidden;
+    height: 400px;
+}
+
+.neue-media-item::before {
+    content: '';
+    position: absolute;
+    inset: -200%;
+    background: conic-gradient(from 0deg, transparent, #00f2ff, transparent 20%);
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neue-media-item.video-item {
+    grid-column: span 2;
+    height: 650px;
+}
+
+.neue-media-img,
+.neue-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    filter: brightness(0.8);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .neue-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .neue-stats {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .neue-stat {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .neue-hero-overlay {
+        padding: 40px 20px;
+    }
+
+    .neue-media-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .neue-media-item.video-item {
+        grid-column: span 1;
+        height: 350px;
+    }
+
+    .neue-media-item {
+        height: 300px;
+    }
+}

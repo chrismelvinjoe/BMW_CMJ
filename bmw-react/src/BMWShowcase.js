@@ -9,8 +9,8 @@ function VideoTile({ src, poster, title, subtitle }) {
     try {
       el.currentTime = 0;
       const p = el.play();
-      if (p && typeof p.then === "function") p.catch(() => {});
-    } catch {}
+      if (p && typeof p.then === "function") p.catch(() => { });
+    } catch { }
   };
 
   const pause = () => {
@@ -19,7 +19,7 @@ function VideoTile({ src, poster, title, subtitle }) {
     try {
       el.pause();
       el.currentTime = 0;
-    } catch {}
+    } catch { }
   };
 
   return (
@@ -51,9 +51,25 @@ function VideoTile({ src, poster, title, subtitle }) {
         />
       </div>
       <div style={{ padding: 16 }}>
-        <h3 style={{ color: "white", fontSize: "1.2rem", margin: 0 }}>{title}</h3>
+        <h3 style={{
+          color: "white",
+          fontSize: "2rem",
+          margin: 0,
+          fontFamily: "'Nuqun', sans-serif",
+          fontStyle: "normal",
+          textTransform: "uppercase",
+
+        }}>{title}</h3>
         {subtitle && (
-          <p style={{ color: "#cccccc", fontSize: ".95rem", marginTop: 6 }}>{subtitle}</p>
+          <p style={{
+            color: "#ffffffff",
+            fontSize: "1rem",
+            marginTop: 6,
+            fontFamily: "'Nuqun', sans-serif",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            letterSpacing: "3px"
+          }}>{subtitle}</p>
         )}
       </div>
     </div>
@@ -62,30 +78,32 @@ function VideoTile({ src, poster, title, subtitle }) {
 
 function BMWShowcase() {
   const tiles = [
-    { src: "/assets/videos/bmwM4.mp4", title: "BMW Hidden Features", subtitle: "Discover clever functions in your BMW." },
-    { src: "/assets/videos/bmwM5.mp4", title: "The Heart of Joy", subtitle: "Redefining driving pleasure." }
+    { src: "/assets/videos/bmwM4.mp4", title: "BMW M4 Dynamics", subtitle: "Uncompromising performance and athletic design." },
+    { src: "/assets/videos/BMW Mcompetition.mp4", title: "BMW M Competition", subtitle: "The absolute pinnacle of driving dynamics." }
   ];
 
   return (
-    <div style={{ backgroundColor: "black", padding: "60px 20px" }}>
+    <div style={{ backgroundColor: "black", padding: "100px 20px" }}>
       <div style={{ maxWidth: 1400, margin: "0 auto" }}>
         <h2
           style={{
-            color: "white",
+            color: "#ffffffff",
             textAlign: "center",
-            fontSize: "2.5rem",
-            marginBottom: 40,
-            fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+            fontSize: "5rem",
+            marginBottom: 60,
+            fontFamily: "'Nuqun', sans-serif",
+            fontStyle: "normal",
+            letterSpacing: "4px",
+            textTransform: "uppercase",
           }}
         >
           BMW Showcase
         </h2>
 
         <div
+          className="responsive-grid grid-2-col"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-            gap: 30
+            gap: "40px"
           }}
         >
           {tiles.map((t) => (
