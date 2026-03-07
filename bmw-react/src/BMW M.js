@@ -100,11 +100,11 @@ function BMWM() {
               onMouseLeave={() => setIsPaused(false)}
             >
               <div className="m4gt-slider-track" style={{
-                transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 900 ? 1 : 2))}%)`,
-                width: `${(m4gtImages.length * 100) / (window.innerWidth < 900 ? 1 : 2)}%`
+                transform: `translateX(-${currentIndex * (100 / (visibleCount))}%)`,
+                width: `${(m4gtImages.length * 100) / (visibleCount)}%`
               }}>
                 {m4gtImages.map((img, idx) => (
-                  <div key={idx} className="m4gt-slide">
+                  <div key={idx} className="m4gt-slide" style={{ width: `${100 / m4gtImages.length}%` }}>
                     <img src={img} alt={`BMW M4 GT ${idx}`} />
                   </div>
                 ))}
