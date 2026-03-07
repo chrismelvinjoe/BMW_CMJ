@@ -100,8 +100,8 @@ function BMWM() {
               onMouseLeave={() => setIsPaused(false)}
             >
               <div className="m4gt-slider-track" style={{
-                transform: `translateX(-${currentIndex * (100 / (visibleCount))}%)`,
-                width: `${(m4gtImages.length * 100) / (visibleCount)}%`
+                transform: `translateX(-${currentIndex * (100 / m4gtImages.length)}%)`,
+                width: `${(m4gtImages.length * 100) / visibleCount}%`
               }}>
                 {m4gtImages.map((img, idx) => (
                   <div key={idx} className="m4gt-slide" style={{ width: `${100 / m4gtImages.length}%` }}>

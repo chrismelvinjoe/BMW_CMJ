@@ -847,8 +847,17 @@ img {
     font-size: 1.6rem;
   }
 
+  .m4gt-slider-wrapper {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .m4gt-slide {
+    padding: 0;
+  }
+
   .m4gt-slide img {
-    height: 500px;
+    height: 350px;
   }
 }
 
