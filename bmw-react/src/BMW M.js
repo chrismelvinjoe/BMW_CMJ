@@ -20,13 +20,13 @@ function BMWM() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1 >= m4gtImages.length ? 0 : prev + 1));
-  };
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1 > m4gtImages.length - visibleCount ? 0 : prev + 1));
+  }, [m4gtImages.length, visibleCount]);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 < 0 ? m4gtImages.length - 1 : prev - 1));
-  };
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 < 0 ? m4gtImages.length - visibleCount : prev - 1));
+  }, [m4gtImages.length, visibleCount]);
 
   useEffect(() => {
     if (isPaused) return;
@@ -100,7 +100,7 @@ function BMWM() {
               onMouseLeave={() => setIsPaused(false)}
             >
               <div className="m4gt-slider-track" style={{
-                transform: `translateX(-${currentIndex * (100 / m4gtImages.length)}%)`,
+                transform: `translateX(-${currentIndex * (100 / (m4gtImages.length))}%)`,
                 width: `${(m4gtImages.length * 100) / visibleCount}%`
               }}>
                 {m4gtImages.map((img, idx) => (
