@@ -1,0 +1,73 @@
+.custom-cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-cursor-container.visible {
+    opacity: 1;
+}
+
+.cursor-dot {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.cursor-ring {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(177, 177, 177, 0.4);
+    box-shadow: 0 0 50px rgba(177, 177, 177, 0.8);
+    border-radius: 50%;
+    transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.liquid-glass-inner {
+    position: absolute;
+    inset: -10px;
+    backdrop-filter: blur(2px);
+    filter: url(#cursor-lg-dist);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    transition: opacity 0.2s ease;
+}
+
+/* Hover State */
+.custom-cursor-container.hovering .cursor-ring {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: -40px;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.custom-cursor-container.hovering .liquid-glass-inner {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.custom-cursor-container.hovering .cursor-dot {
+    transform: scale(0.5);
+    background-color: #b4b4b4;
+    /* BMW Blue */
+}
+
+/* Global cursor hidden rule will be in App.css */

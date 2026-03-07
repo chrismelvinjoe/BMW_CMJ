@@ -1,0 +1,316 @@
+.evolution-page {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+.evolution-header {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #000000, #0a0a0a);
+    position: relative;
+}
+
+.evolution-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(30, 60, 114, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.evolution-header-content {
+    z-index: 2;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.evolution-title {
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.evolution-subtitle {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.evolution-line {
+    width: 60px;
+    height: 2px;
+    background-color: #005696;
+    margin: 0 auto;
+    transition: width 0.5s ease;
+}
+
+.evolution-page:hover .evolution-line {
+    width: 120px;
+}
+
+.evolution-showcase {
+    padding: 0 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.evolution-image-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation: revealIn 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.evolution-timeline-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 86, 150, 0.1);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.evolution-image-container:hover .evolution-timeline-img {
+    transform: scale(1.01);
+}
+
+.evolution-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.detail-card {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 40px 35px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.detail-card:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.detail-card:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.detail-card:nth-child(3) {
+    animation-delay: 1.0s;
+}
+
+.detail-card:hover {
+    transform: translateY(-8px);
+    background: rgba(25, 25, 25, 0.9);
+    border-color: rgba(0, 86, 150, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.detail-card h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.detail-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #005696;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.detail-card:hover h3::after {
+    width: 100%;
+}
+
+.detail-card p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .evolution-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .evolution-page {
+        padding-top: 80px;
+    }
+
+    .evolution-title {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .evolution-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .evolution-details {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .detail-card {
+        transform: translateY(0);
+        opacity: 1;
+        animation: none;
+    }
+}
+
+.design-btn {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid #005696;
+    color: #fff;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.design-btn:hover {
+    background: #005696;
+    box-shadow: 0 0 15px rgba(0, 86, 150, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.evo-overlay-wrap {
+    position: relative;
+    max-width: 70%;
+    height: 600px;
+    margin: 60px auto 0;
+    overflow: hidden;
+    border-radius: 0;
+    transition: box-shadow 0.4s ease;
+}
+
+.evo-overlay-wrap .evolution-timeline-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.evo-funky-text {
+    position: absolute;
+    z-index: 5;
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #FFD600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(255, 214, 0, 0.25);
+    pointer-events: none;
+}
+
+.evo-top-left {
+    top: 30px;
+    left: 40px;
+}
+
+.evo-bottom-right {
+    bottom: 30px;
+    right: 40px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .evo-funky-text {
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+    }
+
+    .evo-top-left {
+        top: 16px;
+        left: 20px;
+    }
+
+    .evo-bottom-right {
+        bottom: 16px;
+        right: 20px;
+    }
+}

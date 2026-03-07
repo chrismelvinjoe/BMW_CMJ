@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import './BMWM3.css';
 
 function CarouselSection() {
@@ -30,7 +30,7 @@ function CarouselSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const nextSlide = useCallback(() => {
+  const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex >= maxIndex) {
         setIsTransitionEnabled(false);
@@ -41,7 +41,7 @@ function CarouselSection() {
       setIsTransitionEnabled(true);
       return prevIndex + 1;
     });
-  }, [maxIndex]);
+  };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => {
@@ -62,7 +62,7 @@ function CarouselSection() {
       nextSlide();
     }, 3000);
     return () => clearInterval(id);
-  }, [isPaused, nextSlide]);
+  }, [isPaused, maxIndex]);
 
   return (
     <div style={{
@@ -308,7 +308,7 @@ function CarouselSection() {
           </div>
         </div>
 
-
+        
         <div className="m3-gallery-accordion-section" style={{ marginTop: "80px" }}>
           <div className="m3-gallery-accordion">
             <div className="accordion-panel">

@@ -1,0 +1,305 @@
+
+
+.interior-page {
+    min-height: 100vh;
+    background-color: #050505;
+    color: #fff;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+
+.interior-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.interior-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 10s ease-out;
+}
+
+.interior-hero:hover .interior-hero-img {
+    transform: scale(1.05);
+}
+
+.interior-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(5, 5, 5, 1) 0%,
+            rgba(5, 5, 5, 0.4) 40%,
+            transparent 100%);
+    z-index: 1;
+}
+
+.interior-hero-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 80px;
+    max-width: 900px;
+}
+
+.interior-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #0066b1;
+    margin-bottom: 1.5rem;
+}
+
+.interior-hero-eyebrow span {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #0066b1;
+}
+
+.interior-hero-title {
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.interior-hero-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.interior-hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+
+.interior-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 120px 40px;
+}
+
+
+.interior-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+.interior-intro-text h2 {
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #999 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.interior-intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.interior-intro-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+.interior-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 160px;
+}
+
+.interior-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.interior-stat-value {
+    font-size: 3rem;
+    font-weight: 100;
+    color: #0066b1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.interior-stat-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.interior-design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.interior-design-card {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.interior-design-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.interior-design-card:hover img {
+    transform: scale(1.1);
+}
+
+.interior-design-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.interior-design-overlay h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.interior-design-overlay p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+
+.interior-collaboration {
+    margin-top: 160px;
+    padding: 100px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.interior-collab-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.interior-collab-text h3 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+.interior-collab-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+
+.interior-collab-img-wrap {
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+}
+
+.interior-collab-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.interior-collab-img-wrap:hover .interior-collab-img {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .interior-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .interior-intro {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .interior-design-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interior-collab-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .interior-hero-overlay {
+        padding: 40px 20px;
+    }
+
+    .interior-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .interior-stats {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .interior-design-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interior-collab-text h3 {
+        font-size: 2.2rem;
+    }
+}
