@@ -10,21 +10,31 @@ function BMWM() {
     "/assets/images/BMWM4GT(6).jpg", "/assets/images/BMWM4GT(7).jpg", "/assets/images/BMWM4GT(8).jpg"
   ];
 
+  const [visibleCount, setVisibleCount] = useState(window.innerWidth < 900 ? 1 : 2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleCount(window.innerWidth < 900 ? 1 : 2);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 2 >= m4gtImages.length ? 0 : prev + 2));
+    setCurrentIndex((prev) => (prev + 1 >= m4gtImages.length ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 2 < 0 ? m4gtImages.length - 2 : prev - 2));
+    setCurrentIndex((prev) => (prev - 1 < 0 ? m4gtImages.length - 1 : prev - 1));
   };
 
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 2 >= m4gtImages.length ? 0 : prev + 2));
-    }, 2000);
+      nextSlide();
+    }, 3000);
     return () => clearInterval(interval);
-  }, [m4gtImages.length, isPaused]);
+  }, [nextSlide, isPaused]);
 
   const sparkColors = ["blue-light", "blue-dark", "red"];
 
@@ -82,200 +92,71 @@ function BMWM() {
             </div>
           </div>
         </div>
-        <div className="bmwm4gt">
-          <div style={{
-            backgroundColor: "#000",
-            padding: "60px 20px",
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            flexDirection: "column"
-          }}>
+        <div className="m4gt-section">
+          <div className="m4gt-container">
             <div
+              className="m4gt-slider-wrapper"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              style={{
-                display: "flex",
-                gap: "20px",
-                marginBottom: "30px",
-                alignSelf: "flex-start",
-                marginLeft: "50px"
+            >
+              <div className="m4gt-slider-track" style={{
+                transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 900 ? 1 : 2))}%)`,
+                width: `${(m4gtImages.length * 100) / (window.innerWidth < 900 ? 1 : 2)}%`
               }}>
-              <div style={{
-                width: "420px",
-                height: "525px",
-                overflow: "hidden",
-              }}>
-                <img
-                  src={m4gtImages[currentIndex]}
-                  alt="BMW M4 GT"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }}
-                />
-              </div>
-
-              <div style={{
-                width: "420px",
-                height: "525px",
-                overflow: "hidden",
-              }}>
-                <img
-                  src={m4gtImages[currentIndex + 1]}
-                  alt="BMW M4 GT"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }}
-                />
-              </div>
-              <div style={{
-                maxWidth: "600px",
-                marginTop: "20px",
-                marginLeft: "20px"
-              }}>
-                <h2 style={{
-                  background: "linear-gradient(135deg, #1976d2 0%, #42a5f5 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  fontSize: "2.8rem",
-                  fontWeight: "900",
-                  margin: "0 0 15px 0",
-                  fontFamily: "'Red Planet', sans-serif",
-                  textTransform: "uppercase",
-                  letterSpacing: "2px",
-                  textShadow: "0 0 30px rgba(25, 118, 210, 0.3)"
-                }}>
-                  THE BMW M4 GT3 EVO
-                </h2>
-
-                <h3 style={{
-                  color: "#ffffff",
-                  fontSize: "2rem",
-                  fontWeight: "700",
-                  margin: "0 0 25px 0",
-                  fontFamily: "'Red Planet', sans-serif",
-                  textTransform: "uppercase",
-                  letterSpacing: "3px",
-                  textShadow: "0 0 20px rgba(255, 255, 255, 0.2)"
-                }}>
-                  RACING PERFECTION
-                </h3>
-                <div style={{
-                  padding: "10px",
-                  color: "#ffffff",
-                  fontSize: "1rem",
-                  fontFamily: "'Corpta', sans-serif",
-                  lineHeight: "1.6",
-                  fontWeight: "400"
-                }}>
-                  <div style={{
-                    padding: "20px",
-                    fontFamily: "'Red Planet', sans-serif",
-                    letterSpacing: "2px",
-                    background: "rgba(255, 255, 255, 0.05)",
-                    borderLeft: "4px solid #0066cc",
-                    marginBottom: "20px",
-                    backdropFilter: "blur(10px)"
-                  }}>
-                    <p style={{ margin: 0, fontSize: "0.95rem", opacity: 0.9 }}>
-                      The M4 GT3 EVO represents the pinnacle of M Motorsport engineering.
-                      Developed to dominate endurance circuits worldwide with a race-tuned
-                      precision chassis and optimized aero efficiency.
-                    </p>
+                {m4gtImages.map((img, idx) => (
+                  <div key={idx} className="m4gt-slide">
+                    <img src={img} alt={`BMW M4 GT ${idx}`} />
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  <div style={{
-                    padding: "15px",
-                    fontSize: "0.85rem",
-                    fontFamily: "'JetBrains Mono', monospace",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    background: "rgba(0, 0, 0, 0.3)",
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "10px"
-                  }}>
-                    <div><span style={{ color: "#0066cc" }}>[SYS_ID]:</span> S58_3.0L_I6</div>
-                    <div><span style={{ color: "#0066cc" }}>[POWER]:</span> 590_HP</div>
-                    <div><span style={{ color: "#0066cc" }}>[WEIGHT]:</span> 1,300_KG</div>
-                    <div><span style={{ color: "#0066cc" }}>[TRANS]:</span> 6_SPD_SEQ</div>
-                    <div style={{ gridColumn: "span 2", marginTop: "5px", borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: "5px" }}>
-                      <span style={{ color: "#E21C26" }}>[AERO]:</span> EVO_HIGH_DOWNFORCE_V3
-                    </div>
-                    <div style={{ gridColumn: "span 2" }}>
-                      <span style={{ color: "#fff", opacity: 0.5 }}>[STATUS]:</span> TRACK_VALIDATION_ACTIVE
-                    </div>
+            <div className="m4gt-info-content">
+              <h2 className="m4gt-evo-title">THE BMW M4 GT3 EVO</h2>
+              <h3 className="m4gt-racing-title">RACING PERFECTION</h3>
+              <div className="m4gt-description-block">
+                <div className="m4gt-highlight-box">
+                  <p>
+                    The M4 GT3 EVO represents the pinnacle of M Motorsport engineering.
+                    Developed to dominate endurance circuits worldwide with a race-tuned
+                    precision chassis and optimized aero efficiency.
+                  </p>
+                </div>
+
+                <div className="m4gt-specs-grid">
+                  <div className="spec-item"><span className="spec-label">[SYS_ID]:</span> S58_3.0L_I6</div>
+                  <div className="spec-item"><span className="spec-label">[POWER]:</span> 590_HP</div>
+                  <div className="spec-item"><span className="spec-label">[WEIGHT]:</span> 1,300_KG</div>
+                  <div className="spec-item"><span className="spec-label">[TRANS]:</span> 6_SPD_SEQ</div>
+                  <div className="spec-item full-width">
+                    <span className="spec-label-red">[AERO]:</span> EVO_HIGH_DOWNFORCE_V3
+                  </div>
+                  <div className="spec-item full-width">
+                    <span className="spec-status">[STATUS]:</span> TRACK_VALIDATION_ACTIVE
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div style={{
-              display: "flex",
-              gap: "20px",
-              alignSelf: "flex-start",
-              marginLeft: "715px"
-            }}>
-              <button
-                onClick={prevSlide}
-                onMouseEnter={(e) => {
-                  setIsPaused(true);
-                  e.currentTarget.style.transform = "scale(0.8)";
-                  e.currentTarget.style.boxShadow = "0 4px 15px #000000";
-                }}
-                onMouseLeave={(e) => {
-                  setIsPaused(false);
-                  e.currentTarget.style.transform = "scale(1)";
-                  e.currentTarget.style.boxShadow = "0 2px 10px #000000";
-                }}
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "none",
-                  backgroundColor: "white",
-                  color: "black",
-                  cursor: "pointer",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  transition: "all 0.3s ease"
-                }}
-              >
-                ‹
-              </button>
+          <div className="m4gt-controls">
+            <button
+              onClick={prevSlide}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              className="m4gt-nav-btn"
+            >
+              ‹
+            </button>
 
-              <button
-                onClick={nextSlide}
-                onMouseEnter={(e) => {
-                  setIsPaused(true);
-                  e.currentTarget.style.transform = "scale(0.8)";
-                  e.currentTarget.style.boxShadow = "0 4px 15px #000000";
-                }}
-                onMouseLeave={(e) => {
-                  setIsPaused(false);
-                  e.currentTarget.style.transform = "scale(1)";
-                  e.currentTarget.style.boxShadow = "0 2px 10px #000000";
-                }}
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "none",
-                  backgroundColor: "white",
-                  color: "black",
-                  cursor: "pointer",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  transition: "all 0.3s ease"
-                }}
-              >
-                ›
-              </button>
-            </div>
+            <button
+              onClick={nextSlide}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              className="m4gt-nav-btn"
+            >
+              ›
+            </button>
           </div>
         </div>
         <div className="BMWMNXT">
