@@ -61,8 +61,6 @@ html {
   text-decoration: none;
 }
 
-.nav li a:hover {}
-
 .nav a {
   display: inline-block;
   height: 66px;
